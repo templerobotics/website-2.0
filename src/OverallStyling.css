@@ -1,0 +1,48 @@
+/* Any of the links and dropdown title button */
+.styled-drop,
+.styled-link {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+/* When hovering on any links */
+.styled-drop:hover,
+.styled-link:hover {
+    color: var(--color-hover-text);
+}
+
+/* The container for the content on each page for consistency */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: calc(var(--vh) * 15) 30vh 30vh;
+}
+
+.grid-container > *{
+    padding: calc(var(--vh) * 8);
+}
+
+/* Set up the title for the current page (location) */
+.title-container {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    
+    /* For centering items within a grid */
+    display: flex;
+    justify-content: center; /* Align horizontally */
+    align-items: center; /* Align vertically */
+    
+    background-image: url('assets/pics/dark-leaves-banner.jpg'); /* Replace with drip-banner.png for other banner */
+    background-size: cover;
+    background-position-y: bottom;
+}
+
+/* Set up the title for the current page */
+.title-container>h1 {
+    color: var(--color-text);
+    margin: 0;
+
+    /* For centering the title vertically with drip */
+    /* Uncomment when using the drip banner */
+    /* margin-bottom: calc(var(--vh) * 5); */
+}
