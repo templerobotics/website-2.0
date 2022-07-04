@@ -59,7 +59,7 @@ function App() {
 	return (
 		<>
 			<GlobalStyles/>
-			<Router>
+			<Router basename='website-2.0'>
 				<div className="App">
 					<Navigation/>
 					<div className='content'>
