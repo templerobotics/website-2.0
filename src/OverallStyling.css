@@ -18,31 +18,34 @@
     grid-template-rows: calc(var(--vh) * 15) 30vh 30vh;
 }
 
-.grid-container > *{
+.grid-container > * {
     padding: calc(var(--vh) * 8);
 }
 
 /* Set up the title for the current page (location) */
 .title-container {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 3;
     
     /* For centering items within a grid */
-    display: flex;
-    justify-content: center; /* Align horizontally */
-    align-items: center; /* Align vertically */
-    
-    background-image: url('assets/pics/dark-leaves-banner.jpg'); /* Replace with drip-banner.png for other banner */
-    background-size: cover;
-    background-position-y: bottom;
+    text-align: center;
+    place-self: center;
 }
 
 /* Set up the title for the current page */
 .title-container>h1 {
     color: var(--color-text);
     margin: 0;
+}
 
-    /* For centering the title vertically with drip */
-    /* Uncomment when using the drip banner */
-    /* margin-bottom: calc(var(--vh) * 5); */
+#video-background { 
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
