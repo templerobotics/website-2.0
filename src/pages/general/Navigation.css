@@ -1,29 +1,10 @@
 /* NavBar background color */
-.navbar-custom {
-    background-color: var(--color-primary);
-}
-
-/* Color of the dropdown button on hover */
-.navbar .dropdown.show a:hover { 
-    background-color: var(--color-third);
-}
-
-/* Color of the dropdown button when open but not hovering */
-a[aria-expanded='true'].dropdown-toggle.nav-link {
-    color: var(--color-text);
-    background-color: var(--color-selected);
-}
-
-/* Any of the links and dropdown title button */
-a[aria-expanded='false'].dropdown-toggle.nav-link {
-    color: var(--color-text);
-    text-decoration: none;
+.navbar {
+    background-color: var(--color-primary) !important;
 }
 
 /* The logo for the website in top left corner */
 #web-logo {
-    margin: auto;
-    margin-right: 10%;
     cursor: pointer;
 }
 
@@ -34,10 +15,10 @@ a[aria-expanded='false'].dropdown-toggle.nav-link {
     padding-left: 5%;
 }
 
-#basic-navbar-nav > div > a {
+a.nav-link {
     color: var(--color-text);
 }
 
-#basic-navbar-nav > div > a:hover {
+a.nav-link:hover {
     color: var(--color-hover-text);
 }

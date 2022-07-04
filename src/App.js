@@ -10,22 +10,22 @@ import Events from './pages/events/Events'
 
 const GlobalStyles = createGlobalStyle`
 	:root {
-		--color-primary: #212529 /* Main theme color */
-		--color-secondary: #343a3f /* Secondary theme color */
-		--color-third: #52575b /* The third color */
-		--color-selected: #343a3f /* The background color for selected items */
-		--color-background: #464c52 /* Background or page color */
-		--color-popup: black /* Background of popups */
+		--color-primary: #9D2235; /* Main theme color */
+		--color-secondary: #343a3f; /* Secondary theme color */
+		--color-third: #52575b; /* The third color */
+		--color-selected: #343a3f; /* The background color for selected items */
+		--color-background: #9D2235; /* Background or page color */
+		--color-popup: black; /* Background of popups */
 
-		--color-text: #c8c8c9 /* Color of text */
-		--color-hover-text: white /* Color of text when hovering over a link */
+		--color-text: #c8c8c9; /* Color of text */
+		--color-hover-text: white; /* Color of text when hovering over a link */
 
-		--QR-code-color: #0c4da0 /* The color for the QR code */
+		--QR-code-color: #9D2235; /* The color for the QR code */
 	}
 
 	body {
-		background-color: var(--color-background)
-		color: var(--color-text)
+		background-color: var(--color-background);
+		color: var(--color-text);
 	}
 
 	.content { margin: 0 }
@@ -65,8 +65,9 @@ function App() {
 					<div className='content'>
 						{/* Define routes within the website */}
 						<Routes>
-							<Route path='/events' element={<Events/>}/>
 							<Route exact path='/' element={<Home/>}/>
+							<Route path='/home' element={<Home/>}/>
+							<Route path='/events' element={<Events/>}/>
 						</Routes>
 					</div>
 				</div>
