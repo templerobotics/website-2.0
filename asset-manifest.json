@@ -1,19 +1,17 @@
 {
   "files": {
-    "main.css": "/website-2.0/static/css/main.d497a87d.css",
-    "main.js": "/website-2.0/static/js/main.c30ddf2d.js",
-    "static/media/glyphicons-halflings-regular.svg": "/website-2.0/static/media/glyphicons-halflings-regular.060b2710bdbbe3dfe48b.svg",
-    "static/media/glyphicons-halflings-regular.ttf": "/website-2.0/static/media/glyphicons-halflings-regular.4692b9ec53fd5972caa2.ttf",
-    "static/media/allwhitelong.png": "/website-2.0/static/media/allwhitelong.b3b68dc5d53089bb12ac.png",
-    "static/media/glyphicons-halflings-regular.woff": "/website-2.0/static/media/glyphicons-halflings-regular.82b1212e45a2bc35dd73.woff",
-    "static/media/glyphicons-halflings-regular.eot": "/website-2.0/static/media/glyphicons-halflings-regular.5be1347c682810f199c7.eot",
-    "static/media/glyphicons-halflings-regular.woff2": "/website-2.0/static/media/glyphicons-halflings-regular.be810be3a3e14c682a25.woff2",
-    "index.html": "/website-2.0/index.html",
-    "main.d497a87d.css.map": "/website-2.0/static/css/main.d497a87d.css.map",
-    "main.c30ddf2d.js.map": "/website-2.0/static/js/main.c30ddf2d.js.map"
+    "main.css": "/static/css/main.bd51ca02.css",
+    "main.js": "/static/js/main.a5979034.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/dark-leaves-banner.jpg": "/static/media/dark-leaves-banner.d397068fc3ba11a5d361.jpg",
+    "static/media/whiteredlong.png": "/static/media/whiteredlong.afaf182f27c819a001f5.png",
+    "index.html": "/index.html",
+    "main.bd51ca02.css.map": "/static/css/main.bd51ca02.css.map",
+    "main.a5979034.js.map": "/static/js/main.a5979034.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d497a87d.css",
-    "static/js/main.c30ddf2d.js"
+    "static/css/main.bd51ca02.css",
+    "static/js/main.a5979034.js"
   ]
 }
