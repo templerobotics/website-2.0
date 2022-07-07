@@ -18,8 +18,9 @@ const GlobalStyles = createGlobalStyle`
 		--color-background: #9D2235; /* Background or page color */
 		--color-popup: black; /* Background of popups */
 
-		--color-text: #c8c8c9; /* Color of text */
+		--color-text: white; /* Color of text */
 		--color-hover-text: white; /* Color of text when hovering over a link */
+		--link-color: #c8c8c9; /* Color of links */
 
 		--QR-code-color: #9D2235; /* The color for the QR code */
 	}
@@ -27,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
 	body {
 		background-color: var(--color-background);
 		color: var(--color-text);
+		margin: 0;
 	}
 
 	.content { margin: 0 }

@@ -12,6 +12,10 @@ const Home = () => {
 				<p className='large-text'>We make robots and stuff</p>
 				<p className='text-center small-text'>Visit us in the</p>
 				<h4 className='text-center'>Student space exploration and embedded systems lab</h4>
+				{/* TODO: Put in the video source here */}
+			</div>
+			<div id='programs' className='section-header'>
+				<span>Programs</span>
 			</div>
 			<p>
 				Welcome! My name is Ryan Hodge and I am an electrical engineer and computer science dual major.

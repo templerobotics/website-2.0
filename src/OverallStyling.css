@@ -1,7 +1,7 @@
 /* Any of the links and dropdown title button */
 .styled-drop,
 .styled-link {
-    color: var(--color-text);
+    color: var(--color-link);
     text-decoration: none;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .grid-container > * {
-    padding: calc(var(--vh) * 8);
+    padding: calc(var(--vh) * 6);
 }
 
 /* Set up the title for the current page (location) */

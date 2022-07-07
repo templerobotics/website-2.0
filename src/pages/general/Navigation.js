@@ -21,6 +21,7 @@ const Navigation = () => {
 		width: window.innerWidth
 	})
 
+	// Used for changing the color of the navbar items when in mobile mode
 	React.useEffect(() => {
 		const set_width = debounce(function handleResize() {
 			setDimensions({ width: window.innerWidth })
@@ -43,6 +44,7 @@ const Navigation = () => {
 				<Navbar.Collapse id='basic-navbar-nav'>
 					<Nav variant='pills' className='navbar-container'>
 						{/* Use HashLink when going to an id */}
+						{/* TODO: Try and get the scrolling for the id's to go to the right place */}
 						<NavLink eventKey="1" as={HashLink} to='/home' onClick={scrollToTop}>Home</NavLink>
 						<NavLink eventKey="2" as={Link} to='/events' onClick={scrollToTop}>Events</NavLink>
 						<NavLink eventKey="3" as={HashLink} to='/home#programs'>Programs</NavLink>

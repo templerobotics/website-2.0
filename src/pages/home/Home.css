@@ -1,7 +1,7 @@
 /* The container for the content on each page for consistency */
 .grid-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: 60vh 30vh 30vh;
+    grid-template-rows: 50vh 30vh 30vh 30vh 30vh;
 }
 
 .title-container {
@@ -16,7 +16,6 @@
     justify-content: center;
     text-align: center;
     line-height: 3;
-    color: white;
     text-transform: uppercase;
     width: 100%;
 }
@@ -29,16 +28,22 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
     position: relative;
     text-transform: uppercase;
     margin-top: 40px;
     width: 100%;
 }
 
+.section-header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: var(--color-primary);
+    font-size: 60px;
+    text-align: center;
+}
+
 h4 {
     font-family: 'arca', 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
     font-weight: 200;
     letter-spacing: 1px;
-    color: white;
 }
