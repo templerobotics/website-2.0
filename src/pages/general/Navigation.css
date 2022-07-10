@@ -1,26 +1,41 @@
 /* NavBar background color */
-.navbar {
-    background-color: var(--color-primary) !important;
-}
-
-/* The logo for the website in top left corner */
-#web-logo {
-    cursor: pointer;
+#navbar-transition {
+    padding: 0%;
+    background-color: transparent !important;
+    transition: background-color 0.3s;
+    height: 50px; /* TODO: change to relative based on screen width */
 }
 
 /* The container for the logo and the title */
 .logo-and-title {
     margin: 0;
-    padding-right: 5%;
-    padding-left: 5%;
+    margin-left: 5%; /* TODO: change to relative based on screen width */
+    margin-right: 5%; /* TODO: change to relative based on screen width */
+    padding-right: 3%; /* TODO: change to relative based on screen width */
+    padding-left: 3%; /* TODO: change to relative based on screen width */
+    background-color: var(--color-primary);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-and-title:hover {
+    background-color: var(--color-selected);
+    cursor: pointer;
 }
 
 a.nav-link {
-    color: var(--color-text);
+    color: var(--color-text) !important;
 }
 
 a.nav-link:hover {
-    color: var(--color-hover-text);
+    color: var(--color-hover-text) !important;
+}
+
+/* The navbar items (navlinks) container */
+#basic-navbar-nav {
+    margin-right: 5%;
+    justify-content: flex-end;
 }
 
 /* Used for mobile when the navbar is expanded */
@@ -29,5 +44,5 @@ a.nav-link:hover {
 }
 
 .no-toggle > .navbar-collapse > .navbar-container > a.nav-link.active {
-    background-color: var(--color-primary) !important;
+    background-color: transparent !important;
 }

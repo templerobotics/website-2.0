@@ -1,0 +1,36 @@
+.carousel-container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 10% 80% 10%; /* TODO: change to relative based on screen width */
+    grid-template-rows: 95% 5%; /* TODO: change to relative based on screen width */
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.chevron-icon {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    color: gray;
+}
+
+.chevron-icon:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#chevron-right {
+    grid-column: 3;
+}
+
+.slide {
+    grid-column: 2;
+    object-fit: cover;
+    width: 100%;
+}
+
+.trim-img {
+    overflow: hidden;
+    height: 100%;
+}

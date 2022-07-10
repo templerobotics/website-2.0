@@ -38,7 +38,8 @@
     margin: 0;
 }
 
-#video-background { 
+#video-background {
+    filter: brightness(50%);
     width: 100vw;
     height: 100vh;
     object-fit: cover;

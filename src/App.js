@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
 import React from 'react'
@@ -19,8 +21,8 @@ const GlobalStyles = createGlobalStyle`
 		--color-popup: black; /* Background of popups */
 
 		--color-text: white; /* Color of text */
-		--color-hover-text: white; /* Color of text when hovering over a link */
-		--link-color: #c8c8c9; /* Color of links */
+		--color-hover-text: #d1d1d1; /* Color of text when hovering over a link */
+		--link-color: white; /* Color of links */
 
 		--QR-code-color: #9D2235; /* The color for the QR code */
 	}
