@@ -15,11 +15,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: calc(var(--vh) * 15) 30vh 30vh;
-}
-
-.grid-container > * {
-    padding: calc(var(--vh) * 6);
+    grid-template-rows: var(--vh) calc(var(--vh) * 0.5px) 30vh 30vh;
 }
 
 /* Set up the title for the current page (location) */
@@ -44,9 +40,5 @@
     height: 100vh;
     object-fit: cover;
     position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
     z-index: -1;
 }

@@ -1,9 +1,14 @@
 /* NavBar background color */
 #navbar-transition {
     padding: 0%;
-    background-color: transparent !important;
+    background-color: var(--color-primary) !important;
     transition: background-color 0.3s;
     height: 50px; /* TODO: change to relative based on screen width */
+}
+
+.toggle > .navbar-collapse {
+    margin: 0 !important;
+    background-color: var(--color-primary) !important;
 }
 
 /* The container for the logo and the title */
@@ -38,8 +43,13 @@ a.nav-link:hover {
     justify-content: flex-end;
 }
 
+.toggle > .navbar-collapse > .navbar-container > a.nav-link {
+    padding-left: 5%;
+}
+
 /* Used for mobile when the navbar is expanded */
-.toggle > .navbar-collapse > .navbar-container > a.nav-link.active {
+.toggle > .navbar-collapse > .navbar-container > a.nav-link.active,
+.toggle > .navbar-collapse > .navbar-container > a.nav-link:hover {
     background-color: var(--color-selected) !important;
 }
 

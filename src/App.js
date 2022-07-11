@@ -40,7 +40,7 @@ function App() {
 
 	React.useEffect(() => {
 		const set_vh = debounce(function handleResize() {
-			let vh = window.innerWidth * 0.01
+			let vh = window.innerWidth
 			document.documentElement.style.setProperty('--vh', `${vh}px`)
 		}, 10)
 

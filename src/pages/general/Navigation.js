@@ -5,6 +5,7 @@ import { HashLink } from 'react-router-hash-link'
 import { Link } from 'react-router-dom'
 import React from 'react'
 
+import * as Constants from '../../tools/Constants'
 import logo from '../../assets/pics/all-white-long.png'
 import debounce from 'lodash.debounce'
 
@@ -26,9 +27,10 @@ const Navigation = () => {
 			setDimensions({ width: window.innerWidth })
 		}, 500)
 
-		const handle_scroll = debounce(function handleResize() {
+		const handle_scroll = debounce(function handleScroll() {
 			let msgEl = document.querySelector('#navbar-transition')
-			if (window.scrollY <= 10) {
+			setDimensions({ width: window.innerWidth })
+			if (window.scrollY <= 10 && dimensions.width > Constants.MOBILE_SIZE) {
 				// Fade to clear if not already clear
 				msgEl.style.setProperty('background-color', 'transparent', 'important')
 			}
@@ -40,17 +42,19 @@ const Navigation = () => {
 
 		window.addEventListener('resize', set_width)
 		window.addEventListener('scroll', handle_scroll)
+		window.addEventListener('resize', handle_scroll)
 
 		return () => { 
 			window.removeEventListener('resize', set_width)
 			window.removeEventListener('scroll', handle_scroll)
+			window.removeEventListener('resize', handle_scroll)
 		}
 	})
 
 	return (
 		<>
 			{/* The rest of the navigation bar. The className is dependent on whether the navbar is expanded or not */}
-			<Navbar id='navbar-transition' className={dimensions.width < 760 ? 'toggle' : 'no-toggle'} sticky='top' bg='dark' variant='dark' expand='md' collapseOnSelect>
+			<Navbar id='navbar-transition' className={dimensions.width < Constants.MOBILE_SIZE ? 'toggle' : 'no-toggle'} sticky='top' bg='dark' variant='dark' expand='md' collapseOnSelect>
 				{/* Top left of the navigation bar */}
 				<Navbar.Brand className='logo-and-title'>
 					<Link to='/home'>

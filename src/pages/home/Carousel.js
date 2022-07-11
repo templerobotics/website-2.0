@@ -13,7 +13,7 @@ export default class Carousel extends React.Component {
 		}
 	}
 
-	slideDirection = (direction) => {
+	slideDirection = (direction, event) => {
 		// Move slides left
 		let currSlide = this.state.currentSlide + direction
 		const slideElement1 = document.querySelector(`#slide${(this.state.currentSlide)}`)
@@ -27,17 +27,18 @@ export default class Carousel extends React.Component {
 		slideElement1.style.setProperty('display', 'none', 'important')
 		slideElement2.style.setProperty('display', 'inline', 'important')
 		this.setState({ currentSlide: currSlide })
+		event.preventDefault()
 	}
 
-	slideLeft = () => { this.slideDirection(1) }
-	slideRight = () => { this.slideDirection(-1) }
+	slideLeft = (event) => { this.slideDirection(1, event) }
+	slideRight = (event) => { this.slideDirection(-1, event) }
 
 	// Render the slides one at a time
 	renderSlides = () => {
 		var indents = []
 		indents.push(<img className='slide' id={'slide0'} key={0} src={this.state.slides[0]}/>)
 		for (var i = 1; i < this.state.slides.length; i++) {
-			indents.push(<img className='slide' id={`slide${i}`} key={i} src={this.state.slides[i]} display='none'/>)
+			indents.push(<img className='slide' id={`slide${i}`} key={i} src={this.state.slides[i]} style={{display: 'none'}}/>)
 		}
 		return indents
 	}
@@ -50,7 +51,7 @@ export default class Carousel extends React.Component {
 					{this.renderSlides()}
 				</div>
 				<BsChevronRight className='chevron-icon' id='chevron-right' onClick={this.slideRight}/>
-				<p style={{margin: 0}}>items</p>
+				<p className='slide-description'>items</p>
 			</div>
 		)
 	}

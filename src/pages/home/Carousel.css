@@ -1,17 +1,19 @@
+.grid-container > .carousel-container {
+    padding: calc(var(--vh) * .05);
+}
+
 .carousel-container {
     grid-column-start: 1;
     grid-column-end: 3;
     display: grid;
-    grid-template-columns: 10% 80% 10%; /* TODO: change to relative based on screen width */
-    grid-template-rows: 95% 5%; /* TODO: change to relative based on screen width */
+    grid-template-columns: auto calc(var(--vh) * .7) auto; /* TODO: change to relative based on screen width */
+    grid-template-rows: calc(var(--vh) * .5) auto; /* TODO: change to relative based on screen width */
     justify-items: center;
     align-items: center;
     overflow: hidden;
 }
 
 .chevron-icon {
-    grid-row-start: 1;
-    grid-row-end: 3;
     color: gray;
 }
 
@@ -33,4 +35,10 @@
 .trim-img {
     overflow: hidden;
     height: 100%;
+}
+
+.slide-description {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: 0;
 }
