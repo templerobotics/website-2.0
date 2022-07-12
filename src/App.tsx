@@ -39,21 +39,15 @@ const GlobalStyles = createGlobalStyle`
 const App = () => {
 
 	React.useEffect(() => {
-		const set_vh = () => debounce(function() {
-			const vh = window.innerWidth
+		const set_vh = debounce(() => {
+			let vh = window.innerWidth
 			document.documentElement.style.setProperty('--vh', `${vh}px`)
 		}, 10)
 
-		// window.addEventListener('resize', set_vh, true)
+		window.addEventListener('resize', set_vh)
 		set_vh()
-		window.addEventListener('resize', function() {
-			debounce(function() {
-				const vh = window.innerWidth
-				document.documentElement.style.setProperty('--vh', `${vh}px`)
-			}, 10)
-		})
 
-		// return () => window.removeEventListener('resize', set_vh)
+		return () => window.removeEventListener('resize', set_vh)
 	})
 
 	return (

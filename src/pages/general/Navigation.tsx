@@ -23,14 +23,14 @@ const Navigation = () => {
 
 	// Used for changing the color of the navbar items when in mobile mode
 	React.useEffect(() => {
-		const set_width = () => debounce(function handleResize() {
+		const set_width = debounce(() => {
 			setDimensions({ width: window.innerWidth })
 		}, 500)
 
-		const handle_scroll = () => debounce(function handleScroll() {
+		const handle_scroll = debounce(() => {
 			let msgEl: HTMLElement = document.querySelector('#navbar-transition')!
 			setDimensions({ width: window.innerWidth })
-			if (window.scrollY <= 10 && dimensions.width > Constants.MOBILE_SIZE) {
+			if (window.scrollY <= 10 && window.innerWidth > Constants.MOBILE_SIZE) {
 				// Fade to clear if not already clear
 				msgEl.style.setProperty('background-color', 'transparent', 'important')
 			}
@@ -41,12 +41,12 @@ const Navigation = () => {
 		}, 10)
 
 		window.addEventListener('resize', set_width)
-		window.addEventListener('scroll', () => handle_scroll)
+		window.addEventListener('scroll', handle_scroll)
 		window.addEventListener('resize', handle_scroll)
 
 		return () => { 
 			window.removeEventListener('resize', set_width)
-			window.removeEventListener('scroll', () => handle_scroll)
+			window.removeEventListener('scroll', handle_scroll)
 			window.removeEventListener('resize', handle_scroll)
 		}
 	})

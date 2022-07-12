@@ -14,7 +14,7 @@ export default class Carousel extends React.Component<{}, {slides: string, curre
 		}
 	}
 
-	slideDirection = (direction: number, event: Event) => {
+	slideDirection = (direction: number, event: React.MouseEvent) => {
 		// Move slides left
 		let currSlide = this.state.currentSlide + direction
 		const slideElement1: HTMLElement = document.querySelector(`#slide${(this.state.currentSlide)}`)!
@@ -31,8 +31,8 @@ export default class Carousel extends React.Component<{}, {slides: string, curre
 		event.preventDefault()
 	}
 
-	slideLeft = (event: Event) => { this.slideDirection(1, event) }
-	slideRight = (event: Event) => { this.slideDirection(-1, event) }
+	slideLeft = (event: React.MouseEvent) => { this.slideDirection(1, event) }
+	slideRight = (event: React.MouseEvent) => { this.slideDirection(-1, event) }
 
 	// Render the slides one at a time
 	renderSlides = () => {
@@ -47,11 +47,11 @@ export default class Carousel extends React.Component<{}, {slides: string, curre
 	render () {
 		return (
 			<div className='carousel-container'>
-				<BsChevronLeft className='chevron-icon' id='chevron-left' onClick={() => this.slideLeft}/>
+				<BsChevronLeft className='chevron-icon' id='chevron-left' onClick={this.slideLeft}/>
 				<div className='trim-img'>
 					{this.renderSlides()}
 				</div>
-				<BsChevronRight className='chevron-icon' id='chevron-right' onClick={() => this.slideRight}/>
+				<BsChevronRight className='chevron-icon' id='chevron-right' onClick={this.slideRight}/>
 				<p className='slide-description'>items</p>
 			</div>
 		)
