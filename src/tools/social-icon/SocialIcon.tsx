@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 
 import './SocialIcon.css'
 
-export default class SocialIcon extends React.Component {
-	constructor(props) {
+export default class SocialIcon extends React.Component<{}, {icon: PropTypes.ReactElementLike, source: string}> {
+	static propTypes: { iconElement: PropTypes.Requireable<PropTypes.ReactElementLike>; source: PropTypes.Requireable<string> }
+	constructor(props: any) {
 		super(props)
 		this.state = { icon: props.iconElement, source: props.source }
 	}

@@ -1,4 +1,3 @@
-import React from 'react'
 import { BsHeartFill } from 'react-icons/bs'
 import { FiTwitter, FiFacebook, FiInstagram, FiYoutube, FiMail } from 'react-icons/fi'
 import { RiSnapchatLine } from 'react-icons/ri'

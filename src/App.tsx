@@ -36,18 +36,24 @@ const GlobalStyles = createGlobalStyle`
 	.content { margin: 0 }
 `
 
-function App() {
+const App = () => {
 
 	React.useEffect(() => {
-		const set_vh = debounce(function handleResize() {
-			let vh = window.innerWidth
+		const set_vh = () => debounce(function() {
+			const vh = window.innerWidth
 			document.documentElement.style.setProperty('--vh', `${vh}px`)
 		}, 10)
 
-		window.addEventListener('resize', set_vh)
+		// window.addEventListener('resize', set_vh, true)
 		set_vh()
+		window.addEventListener('resize', function() {
+			debounce(function() {
+				const vh = window.innerWidth
+				document.documentElement.style.setProperty('--vh', `${vh}px`)
+			}, 10)
+		})
 
-		return () => window.removeEventListener('resize', set_vh)
+		// return () => window.removeEventListener('resize', set_vh)
 	})
 
 	return (
@@ -63,7 +69,7 @@ function App() {
 					<div className='content'>
 						{/* Define routes within the website */}
 						<Routes>
-							<Route exact path='/' element={<Home/>}/>
+							<Route path='/' element={<Home/>}/>
 							<Route path='/home' element={<Home/>}/>
 							<Route path='/events' element={<Events/>}/>
 						</Routes>
