@@ -1,5 +1,3 @@
-/* eslint no-unused-vars: 0 */
-/* eslint no-undef: 0 */
 import React from 'react'
 import { BsChevronLeft, BsChevronRight, BsFillRecordFill } from 'react-icons/bs'
 import $ from 'jquery'
@@ -13,11 +11,11 @@ export interface SlideInfo {
 	title: string
 	description: string
 	color: Color
+	otherContent: React.ReactElement
 }
 
 type CarouselProps = {
 	slideInfo: SlideInfo[],
-	children?: JSX.Element|JSX.Element[]
 }
 
 type CarouselSlideProps = {
@@ -115,6 +113,7 @@ class CarouselSlide extends React.Component<CarouselSlideProps, never> {
 				<div id='slide-words'>
 					<h2>{this.props.slideInfo.title}</h2>
 					<p id='slide-description'>{this.props.slideInfo.description}</p>
+					{this.props.slideInfo.otherContent}
 				</div>
 			</div>
 		)

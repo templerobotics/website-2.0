@@ -15,16 +15,30 @@ import slide3 from '../../assets/pics/carousel/ballon-team.jpg'
 import title from '../../assets/pics/white-red-long.png'
 
 const slideInfo: SlideInfo[] = [
-	{ image: slide1, title: 'NASA RMC', description: `The NASA Robotics Mining Competition is a university-level student competion 
+	{ image: slide1, title: 'NASA RMC',
+		description: `The NASA Robotics Mining Competition is a university-level student competion 
 		to design and build a mining robot that can traverse the challenging simulated Martian terrain. The mining robot must then excavate 
 		the regolith simulant and/or the ice simulant (gravel) and return the excavated mass for deposit into the collector bin to simulate 
-		an offworld, in situ resource mining mission.`, color: COLORS.BLUE },
-	{ image: slide2, title: 'ROCKSAT', description: `The Rockstat Team designed a payload that will be placed inside of a sounding 
+		an offworld, in situ resource mining mission.`,
+		color: COLORS.BLUE,
+		otherContent: <Button source={'/rmc'} local={true} text={'Learn More'} /> },
+	{ image: slide2, 
+		title: 'ROCKSAT', description: `The Rockstat Team designed a payload that will be placed inside of a sounding 
 		rocket which is provided by the Wallops Flight Facility. The rocket will launch at Wallops Island where it will follow a 
-		sub-orbital flight path into the Atlantic Ocean, reaching an estimated maximum height of 72 miles.`, color: COLORS.GREEN },
-	{ image: slide3, title: 'NASA BALOONING', description: `The Temple NASA Ballooning Team will participate as one of over fifty teams 
+		sub-orbital flight path into the Atlantic Ocean, reaching an estimated maximum height of 72 miles.`,
+		color: COLORS.GREEN,
+		otherContent: <Button source={'https://spacegrant.colorado.edu/rs-c-2020-current-teams/rsc-tu-20'}
+			text={'Learn More'} /> },
+	{ image: slide3, title: 'NASA BALOONING', 
+		description: `The Temple NASA Ballooning Team will participate as one of over fifty teams 
 		responsible for the design and production of an HAB that is capable of recording and streaming live video footage to the NASA 
-		website, a task which has never been attempted for a solar eclipse.`, color: COLORS.PURPLE }
+		website, a task which has never been attempted for a solar eclipse.`,
+		color: COLORS.PURPLE,
+		otherContent: 
+		<div>
+			<Button source={'https://sites.google.com/a/temple.edu/eclipseballooningproject/home'} text={'Learn More'} />
+			<Button source={'https://www.youtube.com/watch?v=rGMibNYSnRg'} text={'Watch Video'} />
+		</div> }
 ]
 
 const Home = () => {

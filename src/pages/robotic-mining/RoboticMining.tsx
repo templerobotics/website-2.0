@@ -1,7 +1,7 @@
 import React from 'react'
-import './Events.css'
+import './RoboticMining.css'
 
-const Events = () => {
+const RoboticMining = () => {
 	return (
 		<div className="grid-container" id='events-container'>
 			<div className='title-container'><h1>Events</h1></div>
@@ -15,4 +15,4 @@ const Events = () => {
 	)
 }
 
-export default Events
+export default RoboticMining

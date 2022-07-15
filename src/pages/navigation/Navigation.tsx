@@ -6,15 +6,9 @@ import { Link } from 'react-router-dom'
 import React from 'react'
 
 import * as Constants from '../../tools/Constants'
+import { scrollToTop } from '../../tools/HelpfulFunctions'
 import logo from '../../assets/pics/all-white-long.png'
 import debounce from 'lodash.debounce'
-
-const scrollToTop = () =>{
-	window.scrollTo({
-		top: 0, 
-		behavior: 'smooth'
-	})
-}
 
 const Navigation = () => {
 	const [dimensions, setDimensions] = React.useState({ 
