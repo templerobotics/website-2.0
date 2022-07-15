@@ -1,7 +1,7 @@
 /* Any of the links and dropdown title button */
 .styled-drop,
 .styled-link {
-    color: var(--color-text);
+    color: var(--color-link);
     text-decoration: none;
 }
 
@@ -15,34 +15,30 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: calc(var(--vh) * 15) 30vh 30vh;
-}
-
-.grid-container > *{
-    padding: calc(var(--vh) * 8);
+    grid-template-rows: var(--vh) calc(var(--vh) * 0.5px) 30vh 30vh;
 }
 
 /* Set up the title for the current page (location) */
 .title-container {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 3;
     
     /* For centering items within a grid */
-    display: flex;
-    justify-content: center; /* Align horizontally */
-    align-items: center; /* Align vertically */
-    
-    background-image: url('assets/pics/dark-leaves-banner.jpg'); /* Replace with drip-banner.png for other banner */
-    background-size: cover;
-    background-position-y: bottom;
+    text-align: center;
+    place-self: center;
 }
 
 /* Set up the title for the current page */
 .title-container>h1 {
     color: var(--color-text);
     margin: 0;
+}
 
-    /* For centering the title vertically with drip */
-    /* Uncomment when using the drip banner */
-    /* margin-bottom: calc(var(--vh) * 5); */
+#video-background {
+    filter: brightness(50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
 }
