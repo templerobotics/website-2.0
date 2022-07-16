@@ -1,8 +1,0 @@
-a > #submit-button {
-    font-weight: bold;
-    border-radius: calc(var(--vh) * .05);
-}
-
-a > #submit-button:hover {
-    color: var(--color-primary);
-}

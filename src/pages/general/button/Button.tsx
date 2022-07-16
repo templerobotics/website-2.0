@@ -1,38 +1,52 @@
+// Third party
 import React from 'react'
 import { Link } from 'react-router-dom'
+
+// Custom styles
+import Styles, { ButtonProps } from './ButtonStyles'
+
+// General tools
 import { scrollToTop } from '../../../tools/HelpfulFunctions'
 
-import './Button.css'
-
-type ButtonProps = {
-	id?: string,
-	text: string,
-	source: string
-	local?: boolean
-}
-
 export default class Button extends React.Component<ButtonProps, never> {
+	render (): React.ReactElement {
+		let buttonSize: string
+		let local = this.props.local
+		local = !this.props.source ? true : local
 
-	/**
-	 * Render the slide elements
-	 * @returns An array of carousel slide elements
-	 */
-	renderLink = () => {
-		if (this.props?.local) {
-			return <Link id='submit-button' to={ this.props.source } onClick={ scrollToTop } className='btn btn-outline-light btn-sm'>
-				{this.props.text}
-			</Link>
+		/** Set the proper size for the button */
+		switch (this.props?.size ?? 'small') {
+			case 'large': buttonSize = 'btn-lg'; break
+			case 'medium': buttonSize = 'btn-md'; break
+			default: buttonSize = 'btn-sm'
 		}
-		return <button id='submit-button' type='submit' className='btn btn-outline-light btn-sm'>
-			{this.props.text}
-		</button>
-	}
 
-	render () {
-		return (
-			<a id={this.props.id} href={this.props.source} target="_blank" rel="noreferrer">
-				{ this.renderLink() }
-			</a>
-		)
+		if (!local) {
+			return (
+				<div>
+					<Styles.ButtonContainer className={this.props.className} id={this.props.id}
+						href={ this.props.source } target='_blank' rel='noreferrer'>
+						<button type='submit' className={ `link-submit-button btn btn-outline-light ${buttonSize}` }>
+							<div>
+								<p>{this.props.text}</p>
+							</div>
+						</button>
+					</Styles.ButtonContainer>
+				</div>
+			)
+		} else {
+			return (
+				<div>
+					<Styles.ButtonContainerDiv className={this.props.className} id={this.props.id}>
+						<Link to={ this.props.source ?? '' } onClick={ this.props.onClick ?? scrollToTop }
+							className={ `link-submit-button btn btn-outline-light ${buttonSize}` }>
+							<div>
+								<p>{this.props.text}</p>
+							</div>
+						</Link>
+					</Styles.ButtonContainerDiv>
+				</div>
+			)
+		}
 	}
 }

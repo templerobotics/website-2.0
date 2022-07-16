@@ -1,81 +1,52 @@
+// Third party imports
 import React from 'react'
-import { BsHeartFill } from 'react-icons/bs'
-import { FiTwitter, FiFacebook, FiInstagram, FiYoutube, FiMail } from 'react-icons/fi'
-import { RiSnapchatLine } from 'react-icons/ri'
-import { COLORS } from '../../tools/Constants'
 
-import './Home.css'
-import Carousel, { SlideInfo } from '../general/carousel/Carousel'
-import IconButton from '../general/button/IconButton'
+// Custom styles
+import Styles from './HomeStyles'
+
+// Custom components
+import Carousel from '../general/carousel/Carousel'
+import Contact from '../contact/Contact'
 import Button from '../general/button/Button'
 
-import slide1 from '../../assets/pics/carousel/rmc-team.jpg'
-import slide2 from '../../assets/pics/carousel/rocksat17.jpg'
-import slide3 from '../../assets/pics/carousel/ballon-team.jpg'
-import title from '../../assets/pics/white-red-long.png'
+// Images
+import title from '../../assets/pics/logos/white-red-long.png'
 
-const slideInfo: SlideInfo[] = [
-	{ image: slide1, title: 'NASA RMC',
-		description: `The NASA Robotics Mining Competition is a university-level student competion 
-		to design and build a mining robot that can traverse the challenging simulated Martian terrain. The mining robot must then excavate 
-		the regolith simulant and/or the ice simulant (gravel) and return the excavated mass for deposit into the collector bin to simulate 
-		an offworld, in situ resource mining mission.`,
-		color: COLORS.BLUE,
-		otherContent: <Button source={'/rmc'} local={true} text={'Learn More'} /> },
-	{ image: slide2, 
-		title: 'ROCKSAT', description: `The Rockstat Team designed a payload that will be placed inside of a sounding 
-		rocket which is provided by the Wallops Flight Facility. The rocket will launch at Wallops Island where it will follow a 
-		sub-orbital flight path into the Atlantic Ocean, reaching an estimated maximum height of 72 miles.`,
-		color: COLORS.GREEN,
-		otherContent: <Button source={'https://spacegrant.colorado.edu/rs-c-2020-current-teams/rsc-tu-20'}
-			text={'Learn More'} /> },
-	{ image: slide3, title: 'NASA BALOONING', 
-		description: `The Temple NASA Ballooning Team will participate as one of over fifty teams 
-		responsible for the design and production of an HAB that is capable of recording and streaming live video footage to the NASA 
-		website, a task which has never been attempted for a solar eclipse.`,
-		color: COLORS.PURPLE,
-		otherContent: 
-		<div>
-			<Button source={'https://sites.google.com/a/temple.edu/eclipseballooningproject/home'} text={'Learn More'} />
-			<Button source={'https://www.youtube.com/watch?v=rGMibNYSnRg'} text={'Watch Video'} />
-		</div> }
-]
+const slideInfo = Styles.slideInfo
 
-const Home = () => {
+const Home = (): React.ReactElement => {
 	return (
-		<div className='grid-container' id='home-container'>
-			<div className='title-container'>
+		<Styles.HomeContainer>
+			<Styles.TitleContainer className='title-container'>
 				<img width='80%' src={title} alt='Temple Robotics'/>
-				<p className='large-text'>We make robots and stuff</p>
-				<p className='small-text'>Visit us in the</p>
-				<h4 id='heading-description'>Student space exploration and embedded systems lab</h4>
-			</div>
+				<Styles.LargeText>We make robots and stuff</Styles.LargeText>
+				<Styles.SmallText>Visit us in the</Styles.SmallText>
+				<Styles.Header>
+					Student space exploration and embedded systems lab <br/>
+					(second floor of the engineering building)
+				</Styles.Header>
+			</Styles.TitleContainer>
 
-			<Button id={'video-source'} source={'https://www.youtube.com/watch?v=zSLdsUXOmlI&ab_channel=MapleFilms'}
+			<Styles.VideoSource source={'https://www.youtube.com/watch?v=zSLdsUXOmlI&ab_channel=MapleFilms'}
 				text={'Video Source'} />
 
-			<div id='programs' className='section-header'>
-				<span>Programs</span>
-			</div>
+			{/* Id used for linking */}
+			<Styles.SectionHeader id='programs'>
+				<h2>Programs</h2>
+			</Styles.SectionHeader>
 
 			<Carousel slideInfo={slideInfo}/>
 
-			<div id='sponsors' className='section-header'>
-				<span>Sponsors</span>
-			</div>
+			{/* Id used for linking */}
+			<Styles.SectionHeader id='sponsors'>
+				<h2>Help Temple Robotics</h2>
+				<h2>make robots and stuff</h2>
+				{/* TODO: Put in link to sponsors page */}
+				<Button source={'/sponsors'} local={true} text={'Become a Sponsor'} size={'large'}/>
+			</Styles.SectionHeader>
 
-			<div id='contact'>
-				<h2 id='contact-description'>We <BsHeartFill id='sponsor-heart'/> new friends!</h2>
-				<div id='icons'>
-					<IconButton icon={<FiTwitter/>} source={'https://twitter.com/templerobotics'} />
-					<IconButton icon={<FiFacebook/>} source={'https://www.facebook.com/templerobotics'} />
-					<IconButton icon={<FiInstagram/>} source={'https://www.instagram.com/templerobotics/'} />
-					<IconButton icon={<RiSnapchatLine/>} source={'https://snapchat.com/add/templerobotics'} />
-					<IconButton icon={<FiYoutube/>} source={'https://www.youtube.com/channel/UCv59XUAVDLtgk0KA9r4RTsA'} />
-					<IconButton icon={<FiMail/>} source={'Mailto:robotics@temple.edu'} />
-				</div>
-			</div>
-		</div>
+			<Contact/>
+		</Styles.HomeContainer>
 	)
 }
 
