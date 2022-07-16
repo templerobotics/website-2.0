@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website-2.0/static/css/main.960f91c5.css",
-    "main.js": "/website-2.0/static/js/main.7247c00f.js",
+    "main.css": "/website-2.0/static/css/main.4ca02390.css",
+    "main.js": "/website-2.0/static/js/main.44221c0e.js",
     "static/js/787.933ba907.chunk.js": "/website-2.0/static/js/787.933ba907.chunk.js",
     "static/media/nasavid.mp4": "/website-2.0/static/media/nasavid.6f405261f41b88c996cd.mp4",
     "static/media/rocksat17.jpg": "/website-2.0/static/media/rocksat17.184ad0c2bf48f2275347.jpg",
@@ -11,12 +11,12 @@
     "static/media/white-red-long.png": "/website-2.0/static/media/white-red-long.afaf182f27c819a001f5.png",
     "static/media/all-white-long.png": "/website-2.0/static/media/all-white-long.b3b68dc5d53089bb12ac.png",
     "index.html": "/website-2.0/index.html",
-    "main.960f91c5.css.map": "/website-2.0/static/css/main.960f91c5.css.map",
-    "main.7247c00f.js.map": "/website-2.0/static/js/main.7247c00f.js.map",
+    "main.4ca02390.css.map": "/website-2.0/static/css/main.4ca02390.css.map",
+    "main.44221c0e.js.map": "/website-2.0/static/js/main.44221c0e.js.map",
     "787.933ba907.chunk.js.map": "/website-2.0/static/js/787.933ba907.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.960f91c5.css",
-    "static/js/main.7247c00f.js"
+    "static/css/main.4ca02390.css",
+    "static/js/main.44221c0e.js"
   ]
 }
