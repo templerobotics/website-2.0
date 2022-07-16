@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/website-2.0/static/css/main.1946efa7.css",
-    "main.js": "/website-2.0/static/js/main.a49d2045.js",
+    "main.css": "/website-2.0/static/css/main.960f91c5.css",
+    "main.js": "/website-2.0/static/js/main.7247c00f.js",
     "static/js/787.933ba907.chunk.js": "/website-2.0/static/js/787.933ba907.chunk.js",
     "static/media/nasavid.mp4": "/website-2.0/static/media/nasavid.6f405261f41b88c996cd.mp4",
     "static/media/rocksat17.jpg": "/website-2.0/static/media/rocksat17.184ad0c2bf48f2275347.jpg",
     "static/media/rmc-team.jpg": "/website-2.0/static/media/rmc-team.9950a48595797ce153f3.jpg",
     "static/media/ballon-team.jpg": "/website-2.0/static/media/ballon-team.17b3e998ef680d327536.jpg",
+    "static/media/robot-2019.jpg": "/website-2.0/static/media/robot-2019.addb5a8fadde653bffc4.jpg",
     "static/media/white-red-long.png": "/website-2.0/static/media/white-red-long.afaf182f27c819a001f5.png",
     "static/media/all-white-long.png": "/website-2.0/static/media/all-white-long.b3b68dc5d53089bb12ac.png",
     "index.html": "/website-2.0/index.html",
-    "main.1946efa7.css.map": "/website-2.0/static/css/main.1946efa7.css.map",
-    "main.a49d2045.js.map": "/website-2.0/static/js/main.a49d2045.js.map",
+    "main.960f91c5.css.map": "/website-2.0/static/css/main.960f91c5.css.map",
+    "main.7247c00f.js.map": "/website-2.0/static/js/main.7247c00f.js.map",
     "787.933ba907.chunk.js.map": "/website-2.0/static/js/787.933ba907.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1946efa7.css",
-    "static/js/main.a49d2045.js"
+    "static/css/main.960f91c5.css",
+    "static/js/main.7247c00f.js"
   ]
 }
