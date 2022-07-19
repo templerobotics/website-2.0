@@ -1,22 +1,29 @@
 {
   "files": {
-    "main.css": "/website-2.0/static/css/main.4ca02390.css",
-    "main.js": "/website-2.0/static/js/main.44221c0e.js",
+    "main.css": "/website-2.0/static/css/main.82aad3f8.css",
+    "main.js": "/website-2.0/static/js/main.97148667.js",
     "static/js/787.933ba907.chunk.js": "/website-2.0/static/js/787.933ba907.chunk.js",
     "static/media/nasavid.mp4": "/website-2.0/static/media/nasavid.6f405261f41b88c996cd.mp4",
     "static/media/rocksat17.jpg": "/website-2.0/static/media/rocksat17.184ad0c2bf48f2275347.jpg",
     "static/media/rmc-team.jpg": "/website-2.0/static/media/rmc-team.9950a48595797ce153f3.jpg",
     "static/media/ballon-team.jpg": "/website-2.0/static/media/ballon-team.17b3e998ef680d327536.jpg",
+    "static/media/rmc-2011.jpg": "/website-2.0/static/media/rmc-2011.8d1d44bd1fe7ddf0d548.jpg",
+    "static/media/rmc-2009.png": "/website-2.0/static/media/rmc-2009.97fc28cdc395a2952f29.png",
+    "static/media/botshop.png": "/website-2.0/static/media/botshop.1567a0a0a193a76c4413.png",
+    "static/media/rmc-2010.png": "/website-2.0/static/media/rmc-2010.2277cf8db4919f30cee5.png",
     "static/media/robot-2019.jpg": "/website-2.0/static/media/robot-2019.addb5a8fadde653bffc4.jpg",
+    "static/media/boxbot.png": "/website-2.0/static/media/boxbot.cb2b25700e627b01c51c.png",
+    "static/media/club-filing.jpg": "/website-2.0/static/media/club-filing.3b96867d536efd76717d.jpg",
+    "static/media/ethernet-screwup.jpg": "/website-2.0/static/media/ethernet-screwup.0fc7dff8e79fe4974987.jpg",
     "static/media/white-red-long.png": "/website-2.0/static/media/white-red-long.afaf182f27c819a001f5.png",
     "static/media/all-white-long.png": "/website-2.0/static/media/all-white-long.b3b68dc5d53089bb12ac.png",
     "index.html": "/website-2.0/index.html",
-    "main.4ca02390.css.map": "/website-2.0/static/css/main.4ca02390.css.map",
-    "main.44221c0e.js.map": "/website-2.0/static/js/main.44221c0e.js.map",
+    "main.82aad3f8.css.map": "/website-2.0/static/css/main.82aad3f8.css.map",
+    "main.97148667.js.map": "/website-2.0/static/js/main.97148667.js.map",
     "787.933ba907.chunk.js.map": "/website-2.0/static/js/787.933ba907.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ca02390.css",
-    "static/js/main.44221c0e.js"
+    "static/css/main.82aad3f8.css",
+    "static/js/main.97148667.js"
   ]
 }
