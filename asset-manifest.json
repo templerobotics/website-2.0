@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website-2.0/static/css/main.a389e36e.css",
-    "main.js": "/website-2.0/static/js/main.26fd102b.js",
+    "main.css": "/website-2.0/static/css/main.fa3db313.css",
+    "main.js": "/website-2.0/static/js/main.c080c2a7.js",
     "static/js/787.933ba907.chunk.js": "/website-2.0/static/js/787.933ba907.chunk.js",
     "static/media/nasavid.mp4": "/website-2.0/static/media/nasavid.6f405261f41b88c996cd.mp4",
     "static/media/space-background.jpg": "/website-2.0/static/media/space-background.a47580daaccfd6b5c96b.jpg",
@@ -18,15 +18,22 @@
     "static/media/boxbot.png": "/website-2.0/static/media/boxbot.cb2b25700e627b01c51c.png",
     "static/media/club-filing.jpg": "/website-2.0/static/media/club-filing.3b96867d536efd76717d.jpg",
     "static/media/ethernet-screwup.jpg": "/website-2.0/static/media/ethernet-screwup.0fc7dff8e79fe4974987.jpg",
+    "static/media/arrow.png": "/website-2.0/static/media/arrow.4ff3c2d4a7ac666ef788.png",
     "static/media/white-red-long.png": "/website-2.0/static/media/white-red-long.afaf182f27c819a001f5.png",
     "static/media/all-white-long.png": "/website-2.0/static/media/all-white-long.b3b68dc5d53089bb12ac.png",
+    "static/media/arcamajora3-heavy-webfont.otf": "/website-2.0/static/media/arcamajora3-heavy-webfont.cce5d0b6e07a251539cd.otf",
+    "static/media/futura-medium-webfont.woff": "/website-2.0/static/media/futura-medium-webfont.563d38a46111091de160.woff",
+    "static/media/arcamajora3-heavy-webfont.eot": "/website-2.0/static/media/arcamajora3-heavy-webfont.1b42e12c5c014741896c.eot",
+    "static/media/arcamajora3-heavy-webfont.woff": "/website-2.0/static/media/arcamajora3-heavy-webfont.c85a2efb32b1e26637d7.woff",
+    "static/media/futura-medium-webfont.woff2": "/website-2.0/static/media/futura-medium-webfont.1a999490288588eb6678.woff2",
+    "static/media/arcamajora3-heavy-webfont.woff2": "/website-2.0/static/media/arcamajora3-heavy-webfont.19f6aea3e09f7e4881cc.woff2",
     "index.html": "/website-2.0/index.html",
-    "main.a389e36e.css.map": "/website-2.0/static/css/main.a389e36e.css.map",
-    "main.26fd102b.js.map": "/website-2.0/static/js/main.26fd102b.js.map",
+    "main.fa3db313.css.map": "/website-2.0/static/css/main.fa3db313.css.map",
+    "main.c080c2a7.js.map": "/website-2.0/static/js/main.c080c2a7.js.map",
     "787.933ba907.chunk.js.map": "/website-2.0/static/js/787.933ba907.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a389e36e.css",
-    "static/js/main.26fd102b.js"
+    "static/css/main.fa3db313.css",
+    "static/js/main.c080c2a7.js"
   ]
 }
