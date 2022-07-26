@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('./fonts/futura-medium-webfont.woff2') format('woff2'),
+         url('./fonts/futura-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arca';
+    src: url('./fonts/arcamajora3-heavy-webfont.otf') format('otf'),
+         url('./fonts/arcamajora3-heavy-webfont.eot') format('eot'),
+         url('./fonts/arcamajora3-heavy-webfont.woff2') format('woff2'),
+         url('./fonts/arcamajora3-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Any of the links and dropdown title button */
+.styled-drop,
+.styled-link {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+/* When hovering on any links */
+.styled-drop:hover,
+.styled-link:hover {
+    color: var(--color-hover-text);
+}
+
+/* The container for the content on each page for consistency */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: var(--vh) calc(var(--vh) * 0.5) 30vh 30vh;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Set up the title for the current page (location) */
+.title-container {
+    /* For centering items within a grid */
+    text-align: center;
+    place-self: center;
+}
+
+/* Set up the title for the current page */
+.title-container>h1 {
+    color: var(--color-text);
+    margin: 0;
+}
+
+#video-background {
+    filter: brightness(50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}

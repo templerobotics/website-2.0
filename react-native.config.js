@@ -5,8 +5,8 @@ module.exports = {
 		'react-native-code-push': {
 			platforms: {
 				ios: null,
-				android: null,
-			},
-		},
-	},
+				android: null
+			}
+		}
+	}
 }

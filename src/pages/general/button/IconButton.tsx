@@ -1,18 +1,15 @@
-import React, { ReactElement } from 'react'
+// Third party
+import React from 'react'
 
-import './IconButton.css'
+// Custom styles
+import Styles, { IconButtonProps } from './IconButtonStyles'
 
-type IconButtonType = {
-	icon: ReactElement,
-	source: string
-}
-
-export default class IconButton extends React.Component<IconButtonType, never> {
-	render () {
+export default class IconButton extends React.Component<IconButtonProps, never> {
+	render (): React.ReactElement {
 		return (
-			<a id='icon-container' href={this.props.source} target="_blank" rel="noreferrer">
+			<Styles.IconContainer href={this.props.source} target='_blank' rel='noreferrer'>
 				{this.props.icon}
-			</a>
+			</Styles.IconContainer>
 		)
 	}
 }

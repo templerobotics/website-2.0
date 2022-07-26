@@ -1,7 +1,7 @@
 {
     "env": {
-        "browser": true,
-        "es2021": true
+        "es2021": true,
+        "node": true
     },
     "extends": [
         "eslint:recommended",
@@ -21,22 +21,30 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "never"
-        ],
-        "max-len": [1, 140, 4]
+        "@typescript-eslint/indent": [ 2, "tab", { "SwitchCase": 1 } ],
+        "linebreak-style": [ 2, "unix" ],
+        "quotes": [ 2, "single" ],
+        "semi": [ 2, "never" ],
+        "max-len": [ 1, 140, 4 ],
+        "no-duplicate-imports": 2,
+        "no-self-compare": 2,
+        "no-template-curly-in-string": 2,
+        "camelcase": 2,
+        "consistent-return": 2,
+        "curly": 1,
+        "dot-notation": 1,
+        "id-length": [ 2, { "max": 25, "exceptions": ["$", "i"], "min": 3 }],
+        "max-depth": [ 2, 4 ],
+        "sort-vars": 1,
+        "array-bracket-spacing": [2, "never"],
+        "brace-style": [ 2, "1tbs", { "allowSingleLine": true } ],
+        "comma-dangle": [ 1, "never" ],
+        "eol-last": [ 2, "always"],
+        "jsx-quotes": [ 2, "prefer-single" ],
+        "key-spacing": [ 2, { "beforeColon": false } ],
+        "lines-around-comment": [ 2, { "beforeBlockComment": true } ],
+        "max-statements-per-line": [ 2, { "max": 2 } ],
+        "no-trailing-spaces": 1,
+        "@typescript-eslint/explicit-function-return-type": [ 2, { "allowExpressions": true } ]
     }
 }

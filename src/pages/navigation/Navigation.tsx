@@ -1,79 +1,51 @@
-import './Navigation.css'
-
-import { Navbar, Nav, NavLink } from 'react-bootstrap'
-import { HashLink } from 'react-router-hash-link'
-import { Link } from 'react-router-dom'
+// Third party
 import React from 'react'
+import { Navbar, NavLink } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+// TODO: Remove or implement
+// import { HashLink } from 'react-router-hash-link'
 
+// Custom styles
+import Styles from './NavigationStyles'
+
+// General tools
 import * as Constants from '../../tools/Constants'
-import { scrollToTop } from '../../tools/HelpfulFunctions'
-import logo from '../../assets/pics/all-white-long.png'
-import debounce from 'lodash.debounce'
+import { getScrollY, getWindowWidth, scrollToTop } from '../../tools/HelpfulFunctions'
 
-const Navigation = () => {
-	const [dimensions, setDimensions] = React.useState({ 
-		width: window.innerWidth
-	})
+// Images
+import logo from '../../assets/pics/logos/all-white-long.png'
 
-	// Used for changing the color of the navbar items when in mobile mode
-	React.useEffect(() => {
-		const set_width = debounce(() => {
-			setDimensions({ width: window.innerWidth })
-		}, 500)
-
-		const handle_scroll = debounce(() => {
-			const msgEl: HTMLElement | null = document.querySelector('#navbar-transition')
-			if (msgEl) {
-				setDimensions({ width: window.innerWidth })
-				if (window.scrollY <= 10 && window.innerWidth > Constants.MOBILE_SIZE) {
-					// Fade to clear if not already clear
-					msgEl.style.setProperty('background-color', 'transparent', 'important')
-				}
-				else {
-					// Fade to red
-					msgEl.style.setProperty('background-color', 'var(--color-primary)', 'important')
-				}
-			}
-			else {
-				console.error('id navbar-transition not found')
-			}
-		}, 10)
-
-		window.addEventListener('resize', set_width)
-		window.addEventListener('scroll', handle_scroll)
-		window.addEventListener('resize', handle_scroll)
-
-		return () => { 
-			window.removeEventListener('resize', set_width)
-			window.removeEventListener('scroll', handle_scroll)
-			window.removeEventListener('resize', handle_scroll)
-		}
-	})
-
+const Navigation = (): React.ReactElement => {
+	const { scroll } = getScrollY()
+	const { width } = getWindowWidth()
 	return (
 		<>
 			{/* The rest of the navigation bar. The className is dependent on whether the navbar is expanded or not */}
-			<Navbar id='navbar-transition' className={dimensions.width < Constants.MOBILE_SIZE ? 'toggle' : 'no-toggle'}
+			<Styles.NavigationBar id='navbar-transition'
+				transparency={ scroll <= 10 && width > Constants.MOBILE_SIZE ? 1 : 0 }
+				toggle={ width < Constants.MOBILE_SIZE ? 1 : 0 }
 				sticky='top' bg='dark' variant='dark' expand='md' collapseOnSelect>
 				{/* Top left of the navigation bar */}
-				<Navbar.Brand className='logo-and-title'>
-					<Link to='/home'>
+				<Styles.Logo className='logo-and-title'>
+					<Link className='logo-container' to='/home'>
 						<img alt='logo' src={logo} width='200px' id='web-logo' onClick={scrollToTop}/>
 					</Link>
-				</Navbar.Brand>
+				</Styles.Logo>
 				<Navbar.Toggle aria-controls='basic-navbar-nav' />
-				<Navbar.Collapse id='basic-navbar-nav'>
-					<Nav variant='pills' className='navbar-container'>
+				<Navbar.Collapse className='basic-navbar-links'>
+					<Styles.NavbarLinks variant='pills' toggle={ width < Constants.MOBILE_SIZE ? 1 : 0 }>
 						{/* Use HashLink when going to an id */}
-						{/* TODO: Try and get the scrolling for the id's to go to the right place */}
-						<NavLink eventKey='1' as={HashLink} to='/home' onClick={scrollToTop}>Home</NavLink>
+						{/* TODO: Maybe put links to other pages in offcanvas or dropdown or soemthing */}
+						<NavLink eventKey='1' as={Link} to='/home' onClick={scrollToTop}>Home</NavLink>
 						<NavLink eventKey='2' as={Link} to='/events' onClick={scrollToTop}>Events</NavLink>
-						<NavLink eventKey='3' as={HashLink} to='/home#programs'>Programs</NavLink>
-						<NavLink eventKey='4' as={HashLink} to='/home#sponsors'>Sponsors</NavLink>
-						<NavLink eventKey='5' as={HashLink} to='/home#contact'>Contact Us</NavLink>
-					</Nav>
+						<NavLink eventKey='3' as={Link} to='/sponsors' onClick={scrollToTop}>Sponsors</NavLink>
+						<NavLink eventKey='7' as={Link} to='/rmc' onClick={scrollToTop}>RMC</NavLink>
+						{/* <NavLink eventKey='4' as={HashLink} to='/home#programs'>Programs</NavLink> */}
+						{/* <NavLink eventKey='5' as={HashLink} to='/home#sponsors'>Sponsors</NavLink> */}
+						{/* <NavLink eventKey='6' as={HashLink} to='/home#contact'>Contact Us</NavLink> */}
+					</Styles.NavbarLinks>
 				</Navbar.Collapse>
-			</Navbar>
+			</Styles.NavigationBar>
 		</>
 	)
 }
