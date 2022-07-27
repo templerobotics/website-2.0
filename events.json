@@ -1,0 +1,9 @@
+{
+  "events": [
+    {
+      "title": "Title of the event",
+      "description": "Description of the event",
+      "image": "./image/location"
+    }
+  ]
+}
