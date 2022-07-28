@@ -31,6 +31,7 @@ export default class RoboticMiningStyles {
 	static readonly TitleContainer = styled.div`
 		& > .title {
 			${FONT_FAMILY.PAGE_TITLE}
+			font-size: calc(var(--vh) * .07);
 		}
 	`
 
