@@ -3,7 +3,7 @@ import { AiOutlineDash } from 'react-icons/ai'
 import EventSection from './EventSection'
 
 import Styles from './EventsStyles'
-import Button from '../general/button/Button'
+// import Button from '../general/button/Button'
 
 import { getEventsFromDatabase } from '../../tools/HelpfulFunctions'
 
@@ -14,7 +14,6 @@ const Events = (): React.ReactElement => {
 	const eventsGridCss = `
 		calc(var(--vh) * .3)
 		calc(var(--vh) * ${events.length} * 0.2)
-		calc(var(--vh) * .2)
 	`
 
 	return (
@@ -24,9 +23,10 @@ const Events = (): React.ReactElement => {
 				<AiOutlineDash/>
 			</Styles.TitleContainer>
 			<EventSection events={events}/>
-			<div className='create-button-container'>
+			{/* If we ever want to make the database dynamic */}
+			{/* <div className='create-button-container'>
 				<Button text='Create New Event' size='large'/>
-			</div>
+			</div> */}
 		</Styles.EventsContainer>
 	)
 }
