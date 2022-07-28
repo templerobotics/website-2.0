@@ -1,0 +1,16 @@
+[
+	{
+		"title": "Title of the event",
+		"description": "Description of the event",
+		"date": "04/22",
+		"location": "Engineering building",
+		"id": 0
+	},
+	{
+		"title": "Title of the event 2",
+		"description": "Description of the event 2",
+		"date": "04/23",
+		"location": "Engineering building",
+		"id": 1
+	}
+]

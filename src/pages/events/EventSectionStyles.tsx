@@ -16,7 +16,7 @@ export default class EventSectionStyles {
 		width: 80%;
 		height: 100%;
 		display: grid;
-		grid-template-columns: 30% 20% 50%;
+		grid-template-columns: 30% 30% 40%;
 		grid-template-rows: 40% 60%;
 		background-color: var(--color-primary);
         border-radius: calc(var(--vh) * .05);
@@ -36,6 +36,7 @@ export default class EventSectionStyles {
 			${FONT_FAMILY.TITLE}
 		}
 
+		& > .location,
 		& > .description {
 			align-self: flex-start;
 		}

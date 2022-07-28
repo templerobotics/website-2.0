@@ -2,7 +2,7 @@
 // Third party
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import {isMobile} from 'react-device-detect'
+import { isMobile } from 'react-device-detect'
 
 // Styles
 import { createGlobalStyle } from 'styled-components'
@@ -51,6 +51,7 @@ const GlobalStyles = createGlobalStyle`
 `
 
 const App = (): React.ReactElement => {
+	// TODO: On mobile if zoomed in when loading this will recompile or something, changing the value of --vh
 	document.documentElement.style.setProperty('--vh', `${useWindowDimensions().width}px`)
 	isMobile ? null : setVariableCssVars()
 
