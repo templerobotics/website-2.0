@@ -2,15 +2,29 @@
 	{
 		"title": "Title of the event",
 		"description": "Description of the event",
-		"date": "04/22",
+		"date": "04/22/2020",
 		"location": "Engineering building",
 		"id": 0
 	},
 	{
 		"title": "Title of the event 2",
 		"description": "Description of the event 2",
-		"date": "04/23",
+		"date": "04/23/2022",
 		"location": "Engineering building",
 		"id": 1
+	},
+	{
+		"title": "Title of the event 2",
+		"description": "Description of the event 2",
+		"date": "04/23/2023",
+		"location": "Engineering building",
+		"id": 2
+	},
+	{
+		"title": "Title of the event 2",
+		"description": "Description of the event 2",
+		"date": "04/23/2024",
+		"location": "Engineering building",
+		"id": 3
 	}
 ]

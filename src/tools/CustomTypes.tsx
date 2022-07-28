@@ -2,7 +2,7 @@ export type Color = `#${string}`
 
 export type EventObject = {
 	title: string,
-	date: string,
+	date: Date,
 	location: string,
 	description: string
 }

@@ -13,7 +13,8 @@ const Events = (): React.ReactElement => {
 
 	const eventsGridCss = `
 		calc(var(--vh) * .3)
-		calc(var(--vh) * ${events.length} * 0.2)
+		calc(var(--vh) * ${events.length} * .2)
+		calc(var(--vh) * .2)
 	`
 
 	return (

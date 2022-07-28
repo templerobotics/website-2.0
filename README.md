@@ -8,6 +8,10 @@ The event database is located [here](public/db.json). Add an event by appending 
 the array. Events will need to be removed manually, as gh-pages cannot host a dynamic 
 webpage. An example `json` can be seen below.
 
+The date format: `mm/dd/yyyy`
+
+**Important:** Make sure to increment the id
+
 ```json
 [
 	{

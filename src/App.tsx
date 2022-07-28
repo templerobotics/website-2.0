@@ -15,6 +15,7 @@ import Home from './pages/home/Home'
 import Sponsors from './pages/sponsors/Sponsors'
 import Events from './pages/events/Events'
 import RoboticMining from './pages/robotic-mining/RoboticMining'
+import Copyright from './pages/copyright/Copyright'
 
 // General tools
 import { ANIMATION_TIME, COLORS, FONT_FAMILY } from './tools/Constants'
@@ -48,6 +49,11 @@ const GlobalStyles = createGlobalStyle`
 		background-color: var(--color-background);
 		color: var(--color-text);
 	}
+
+	html,
+	body {
+		height: 100%;
+	}
 `
 
 const App = (): React.ReactElement => {
@@ -76,6 +82,7 @@ const App = (): React.ReactElement => {
 					</div>
 				</div>
 			</Router>
+			<Copyright/>
 		</>
 	)
 }
