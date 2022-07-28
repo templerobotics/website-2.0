@@ -15,31 +15,6 @@ export default class Carousel extends React.Component<CarouselProps, { currentSl
 		this.state = { currentSlide: 0 }
 	}
 
-	/**
-	 * Render the slide elements
-	 * @returns An array of carousel slide elements
-	 */
-	renderSlides = (): React.ReactElement[] => {
-		const imageElements: React.ReactElement[] = []
-
-		for (let i = 0; i < this.props.slideInfo.length; i++) {
-			imageElements.push(<CarouselSlide key={i} id={`slide${i}`} slideInfo={this.props.slideInfo[i]}/>)
-		}
-		return imageElements
-	}
-
-	/**
-	 * Render the bottom slide counters
-	 */
-	renderSlideCount(): React.ReactElement[] {
-		const counters: React.ReactElement[] = []
-		counters.push(<BsFillRecordFill key={0} id={`counter${0}`} style={{ color: COLORS.PRIMARY }}/>)
-		for (let i = 1; i < this.props.slideInfo.length; i++) {
-			counters.push(<BsFillRecordFill key={i} id={`counter${i}`}/>)
-		}
-		return counters
-	}
-
 	slideLeft = (): void => { this.slide(-1) }
 	slideRight = (): void => { this.slide(1) }
 
@@ -72,6 +47,7 @@ export default class Carousel extends React.Component<CarouselProps, { currentSl
 		// Hide slides after they render
 		$('#slide1').hide()
 		$('#slide2').hide()
+		$('#counter0').css('color', COLORS.PRIMARY)
 	}
 
 	render (): React.ReactElement {
@@ -82,11 +58,11 @@ export default class Carousel extends React.Component<CarouselProps, { currentSl
 			<Styles.CarouselContainer id='carousel-container' style={{background: this.props.slideInfo[0].color}}>
 				<Styles.Chevron as={BsChevronLeft} size={parseFloat(width) * 0.05} onClick={this.slideLeft}/>
 				<Styles.SlideContainer>
-					{this.renderSlides()}
+					{this.props.slideInfo.map((slide, i) => <CarouselSlide key={i} id={`slide${i}`} slideInfo={slide}/>)}
 				</Styles.SlideContainer>
 				<Styles.Chevron as={BsChevronRight} size={parseFloat(width) * 0.05} onClick={this.slideRight} right={'true'}/>
 				<Styles.SlideCountContainer>
-					{this.renderSlideCount()}
+					{this.props.slideInfo.map((_, i) => <BsFillRecordFill key={i} id={`counter${i}`}/>)}
 				</Styles.SlideCountContainer>
 			</Styles.CarouselContainer>
 		)

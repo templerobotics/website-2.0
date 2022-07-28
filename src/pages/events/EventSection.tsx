@@ -1,13 +1,24 @@
 import React from 'react'
+import { EventObject } from '../../tools/CustomTypes'
 
-import Styles, { EventSectionProps } from './EventSectionStyles'
+import Styles from './EventSectionStyles'
 
-class EventSection extends React.Component<EventSectionProps, never> {
+class EventSection extends React.Component<{events: EventObject[]}, never> {
 	render (): React.ReactElement {
 		return (
-			<Styles.EventSectionContainer>
-				<h2>{this.props.title}</h2>
-				<p>{this.props.description}</p>
+			<Styles.EventSectionContainer rows={this.props.events.length}>
+				{this.props.events.map((event, i) => {
+					return (
+						<Styles.EventItemContainer key={i}>
+							<h2 className='title'>{event.title}</h2>
+							<div className='date'>
+								<p>{event.date}</p>
+							</div>
+							<p className='location'>{event.location}</p>
+							<p className='description'>{event.description}</p>
+						</Styles.EventItemContainer>
+					)
+				})}
 			</Styles.EventSectionContainer>
 		)
 	}

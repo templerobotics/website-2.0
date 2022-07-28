@@ -39,9 +39,7 @@ const Home = (): React.ReactElement => {
 
 			{/* Id used for linking */}
 			<Styles.SectionHeader id='sponsors'>
-				<h2>Help Temple Robotics</h2>
-				<h2>make robots and stuff</h2>
-				{/* TODO: Put in link to sponsors page */}
+				<h2>Help Temple Robotics make robots and stuff</h2>
 				<Button source={'/sponsors'} local={true} text={'Become a Sponsor'} size={'large'}/>
 			</Styles.SectionHeader>
 

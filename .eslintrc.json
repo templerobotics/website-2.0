@@ -33,7 +33,7 @@
         "consistent-return": 2,
         "curly": 1,
         "dot-notation": 1,
-        "id-length": [ 2, { "max": 25, "exceptions": ["$", "i"], "min": 3 }],
+        "id-length": [ 2, { "max": 25, "exceptions": ["$", "i", "_"], "min": 3 }],
         "max-depth": [ 2, 4 ],
         "sort-vars": 1,
         "array-bracket-spacing": [2, "never"],
