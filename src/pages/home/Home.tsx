@@ -32,7 +32,7 @@ const Home = (): React.ReactElement => {
 
 			{/* Id used for linking */}
 			<Styles.SectionHeader id='programs'>
-				<h2>Programs</h2>
+				<h2>Program</h2>
 			</Styles.SectionHeader>
 
 			<Carousel slideInfo={slideInfo}/>
