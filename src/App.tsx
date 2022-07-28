@@ -2,7 +2,7 @@
 // Third party
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { isMobile } from 'react-device-detect'
+// import { isMobile } from 'react-device-detect'
 
 // Styles
 import { createGlobalStyle } from 'styled-components'
@@ -19,7 +19,7 @@ import Copyright from './pages/copyright/Copyright'
 
 // General tools
 import { ANIMATION_TIME, COLORS, FONT_FAMILY } from './tools/Constants'
-import useWindowDimensions, { setVariableCssVars } from './tools/HelpfulFunctions'
+// import useWindowDimensions, { setVariableCssVars } from './tools/HelpfulFunctions'
 
 // Images
 import backgroundVideo from './assets/vids/nasavid.mp4'
@@ -58,8 +58,8 @@ const GlobalStyles = createGlobalStyle`
 
 const App = (): React.ReactElement => {
 	// TODO: On mobile if zoomed in when loading this will recompile or something, changing the value of --vh
-	document.documentElement.style.setProperty('--vh', `${useWindowDimensions().width}px`)
-	isMobile ? null : setVariableCssVars()
+	// document.documentElement.style.setProperty('--vh', `${useWindowDimensions().width}px`)
+	// isMobile ? null : setVariableCssVars()
 
 	return (
 		<>
