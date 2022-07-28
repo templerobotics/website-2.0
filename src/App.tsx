@@ -2,6 +2,7 @@
 // Third party
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import {isMobile} from 'react-device-detect'
 
 // Styles
 import { createGlobalStyle } from 'styled-components'
@@ -50,9 +51,8 @@ const GlobalStyles = createGlobalStyle`
 `
 
 const App = (): React.ReactElement => {
-	// TODO: put this before render
-	setVariableCssVars()
 	document.documentElement.style.setProperty('--vh', `${useWindowDimensions().width}px`)
+	isMobile ? null : setVariableCssVars()
 
 	return (
 		<>

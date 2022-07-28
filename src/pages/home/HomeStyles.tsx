@@ -52,8 +52,8 @@ export default class HomeStyles {
 			calc(var(--vh) * .06)   			/* Intro heading button */
 			calc(var(--vh) * .15)   			/* Program section heading */
 			calc(var(--vh) * .4)    			/* Carousel */
-			max(calc(var(--vh) * .3), 200px)   	/* Sponsors section heading */
-			max(calc(var(--vh) * .15), 200px);  /* Contacts */
+			max(calc(var(--vh) * .3), 100px)   	/* Sponsors section heading */
+			max(calc(var(--vh) * .15), 70px);  /* Contacts */
 		justify-content: center;
 	`
 
@@ -86,16 +86,18 @@ export default class HomeStyles {
 	`
 
 	static readonly SectionHeader = styled.div`
+		height: 100%;
 		display: flex;
 		flex-direction: column;
-		height: 100%;
-		padding: 0%;
 		align-items: center;
 		justify-content: center;
-		font-size: 60px;
+		padding-left: 15%;
+		padding-right: 15%;
 		background: linear-gradient(200deg, #9D2235, #996b72, #9D2235);
+		row-gap: 10%;
 
 		& > h2 {
+			text-align: center;
 			${FONT_FAMILY.TITLE}
 		}
 	`
