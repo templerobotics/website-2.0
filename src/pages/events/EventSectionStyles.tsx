@@ -41,7 +41,14 @@ export default class EventSectionStyles {
 			align-self: flex-start;
 		}
 
+		& > .description {
+			padding-right: 4%;
+			height: 100%;
+			overflow-y: scroll;
+		}
+
 		& > .title {
+			${FONT_FAMILY.SUBTITLE}
 			grid-column-start: 2;
 			grid-column-end: 4;
 		}

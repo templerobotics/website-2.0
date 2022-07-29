@@ -9,6 +9,7 @@ the array. Events will need to be removed manually, as gh-pages cannot host a dy
 webpage. An example `json` can be seen below.
 
 The date format: `mm/dd/yyyy`
+The only other accepted format is an empty string, meaning the date has not been decided yet
 
 **Important:** Make sure to increment the id
 

@@ -2,7 +2,6 @@
 import React from 'react'
 
 // Custom components
-import Button from '../general/button/Button'
 import PhotoGallery from '../general/photo-gallery/PhotoGallery'
 import Contact from '../contact/Contact'
 
@@ -15,6 +14,7 @@ import outreachPhoto1 from '../../assets/pics/outreach/vex.jpg'
 import outreachPhoto2 from '../../assets/pics/outreach/expo.jpg'
 import outreachPhoto3 from '../../assets/pics/outreach/interview.gif'
 import title from '../../assets/pics/logos/robotics-red.png'
+import RmcDescription from './SectionDescription'
 
 const RoboticMining = (): React.ReactElement => {
 	return (
@@ -28,22 +28,15 @@ const RoboticMining = (): React.ReactElement => {
 					(second floor of the engineering building)
 				</h4>
 			</Styles.TitleContainer>
-			<Styles.RmcDescription>
-				<div>
-					<h2>What is it?</h2>
-					<p>
-						The NASA Robotics Mining Competition is a competition in which university-level students design
-						and build a mining robot that can traverse the simulated Martian chaotic terrain. See our robot
-						to the right!
-					</p>
-					<Button text='Learn More' size='large' id='rmc-description-button'
-						source='https://www.nasa.gov/offices/education/centers/kennedy/technology/nasarmc.html' />
-				</div>
-				<div>
-					{/* TODO: Put the updated robot in here */}
-					<img alt='logo' src={robot} width='60%' id='web-logo'/>
-				</div>
-			</Styles.RmcDescription>
+
+			{/* TODO: Put the updated robot in here */}
+			<RmcDescription
+				title='What is it?'
+				img={robot}
+				description='The NASA Robotics Mining Competition is a competition in which university-level students design
+				and build a mining robot that can traverse the simulated Martian chaotic terrain. See our robot
+				to the right!'
+				src='https://www.nasa.gov/offices/education/centers/kennedy/technology/nasarmc.html'/>
 
 			<Styles.SpaceBackground>
 				<Styles.OutreachGallery>

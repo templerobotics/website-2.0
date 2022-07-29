@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { COLORS, CSS_STYLES, FONT_FAMILY, PHOTO_GALLERY } from '../../tools/Constants'
+import { FONT_FAMILY, PHOTO_GALLERY } from '../../tools/Constants'
 import { GalleryImage } from '../general/photo-gallery/PhotoGalleryStyles'
 import spaceBackground from '../../assets/pics/outreach/space-background.jpg'
 
@@ -53,45 +53,6 @@ export default class RoboticMiningStyles {
 		& > h4 {
 			${FONT_FAMILY.SUBTITLE}
 		}
-	`
-
-	static readonly RmcDescription = styled.div`
-		height: 100%;
-		background: linear-gradient(200deg, ${COLORS.PRIMARY}, #996b72, ${COLORS.PRIMARY});
-		text-align: center;
-		row-gap: 5%;
-
-		// New
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-
-		& > div {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			height: 100%;
-		}
-
-		& > div > div {
-			margin-bottom: calc(var(--vh) * .08);
-		}
-
-		& > div > p {
-			margin: auto;
-			padding-left: calc(var(--vh) * .1);
-			padding-right: calc(var(--vh) * .1);
-			overflow-y: auto;
-			height: calc(var(--vh) * .1);
-		}
-
-		& > div > h2 {
-			${FONT_FAMILY.TITLE}
-			margin-top: calc(var(--vh) * .08);
-			margin-bottom: 0;
-		}
-
-		${CSS_STYLES.showScrollbar('& > div > p')}
 	`
 
 	static readonly OutreachGallery = styled.div`

@@ -23,10 +23,10 @@ const Home = (): React.ReactElement => {
 					<p>Temple Space Exploration</p>
 				</div>
 				{/* TODO: Change motto */}
-				<Styles.LargeText>We make robots and stuff</Styles.LargeText>
+				<Styles.LargeText>Shoot for the moon with us!</Styles.LargeText>
 				<Styles.SmallText>Visit us in the</Styles.SmallText>
 				<Styles.Header>
-					Student space exploration and embedded systems lab <br/>
+					NASA space exploration and embedded systems lab <br/>
 					(second floor of the engineering building)
 				</Styles.Header>
 			</Styles.TitleContainer>

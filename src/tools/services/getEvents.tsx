@@ -7,20 +7,25 @@ type EventJson = {
 	description: string
 }
 
-// https://temple-robotics-db.herokuapp.com/
+function sortByDate(eventa: EventObject, eventb: EventObject): number {
+	if (eventa.date > eventb.date || isNaN(eventa.date.getMonth())) {
+		return 1
+	} else if (eventa.date == eventb.date) {
+		return 0
+	}
+	return -1
+}
+
 export async function getEvents(): Promise<EventObject[]> {
-	// Uncomment if a dynamic database is wanted
-	// const data = await fetch('https://temple-robotics-db.herokuapp.com/events')
 	const data = await fetch('https://templerobotics.github.io/website-2.0/db.json')
-	const eventData: EventJson[] = await data.json()
+	const eventData: EventJson[] = (await data.json()).events
 	const currentDate = new Date()
 	currentDate.setDate(currentDate.getDate() + 1)
 	const returnData: EventObject[] = eventData.map(event => {
 		return { ...event, date: currentDate }
 	})
 	eventData.forEach((event, i) => {
-		const [month, day, year] = event.date.split('/')
-		returnData[i].date = new Date(+year, +month - 1, +day)
+		returnData[i].date = new Date(event.date)
 	})
-	return returnData.filter(event => event.date.getTime() > currentDate.getTime())
+	return returnData.filter(event => event.date.getTime() > currentDate.getTime() || isNaN(event.date.getMilliseconds())).sort(sortByDate)
 }

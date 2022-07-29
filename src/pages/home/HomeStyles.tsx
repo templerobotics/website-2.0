@@ -3,31 +3,31 @@ import styled from 'styled-components'
 
 import Button from '../general/button/Button'
 import { SlideInfo } from '../general/carousel/CarouselStyles'
-import { COLORS, FONT_FAMILY } from '../../tools/Constants'
-import slide1 from '../../assets/pics/carousel/rmc-team.jpg'
-import slide2 from '../../assets/pics/carousel/rocksat17.jpg'
+import { COLORS, FONT_FAMILY, PATHS } from '../../tools/Constants'
+import slide1 from '../../assets/pics/carousel/rocksat17.jpg'
+import slide2 from '../../assets/pics/carousel/rmc-team.jpg'
 import slide3 from '../../assets/pics/carousel/ballon-team.jpg'
 
 
 export default class HomeStyles {
 	static readonly slideInfo: SlideInfo[] = [
 		{
-			image: slide2,
+			image: slide1,
 			title: 'ROCKSAT', description: `The Rockstat Team designed a payload that will be placed inside of a sounding 
 			rocket which is provided by the Wallops Flight Facility. The rocket will launch at Wallops Island where it will follow a 
 			sub-orbital flight path into the Atlantic Ocean, reaching an estimated maximum height of 72 miles.`,
-			color: COLORS.GREEN, otherContent: <Button source={'https://spacegrant.colorado.edu/rs-c-2020-current-teams/rsc-tu-20'}
+			color: COLORS.GREEN, otherContent: <Button source={PATHS.ROCKSAT} local={true}
 				size={'medium'} text={'Learn More'} />
 		},
 		{
-			image: slide1, title: 'NASA RMC',
+			image: slide2, title: 'NASA RMC',
 			description: `The NASA Robotics Mining Competition is a university-level student competion 
 			to design and build a mining robot that can traverse the challenging simulated Martian terrain.
 			The mining robot must then excavate the regolith simulant and/or the ice simulant (gravel) and
 			return the excavated mass for deposit into the collector bin to simulate an offworld, in situ
 			resource mining mission.`,
 			color: COLORS.BLUE,
-			otherContent: <Button source={'/rmc'} local={true} text={'Learn More'} size={'medium'}/>
+			otherContent: <Button source={PATHS.ROBOTICS} local={true} text={'Learn More'} size={'medium'}/>
 		},
 		{
 			image: slide3, title: 'NASA BALOONING',

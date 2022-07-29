@@ -30,7 +30,10 @@ const Navigation = (): React.ReactElement => {
 				<Styles.Logo className='logo-and-title'>
 					<Link className='logo-container' to='/home'>
 						<img alt='logo' src={nasaLogo} id='web-logo' onClick={scrollToTop}/>
-						<p>Temple Space Exploration</p>
+						<div>
+							<p>Temple Space</p>
+							<p>Exploration</p>
+						</div>
 					</Link>
 				</Styles.Logo>
 				<Navbar.Toggle aria-controls='basic-navbar-nav' />
@@ -38,11 +41,11 @@ const Navigation = (): React.ReactElement => {
 					<Styles.NavbarLinks variant='pills' toggle={ width < Constants.MOBILE_SIZE ? 1 : 0 }>
 						{/* Use HashLink when going to an id */}
 						{/* TODO: Maybe put links to other pages in offcanvas or dropdown or soemthing */}
-						<NavLink eventKey='1' as={Link} to='/home' onClick={scrollToTop}>Home</NavLink>
-						<NavLink eventKey='2' as={Link} to='/events' onClick={scrollToTop}>Events</NavLink>
-						<NavLink eventKey='3' as={Link} to='/sponsors' onClick={scrollToTop}>Sponsors</NavLink>
-						<NavLink eventKey='7' as={Link} to='/robotics' onClick={scrollToTop}>Robotics</NavLink>
-						<NavLink eventKey='7' as={Link} to='/rocksat' onClick={scrollToTop}>Rocksat</NavLink>
+						<NavLink eventKey='1' as={Link} to={Constants.PATHS.HOME} onClick={scrollToTop}>Home</NavLink>
+						<NavLink eventKey='2' as={Link} to={Constants.PATHS.EVENTS} onClick={scrollToTop}>Events</NavLink>
+						<NavLink eventKey='3' as={Link} to={Constants.PATHS.SPONSORS} onClick={scrollToTop}>Sponsors</NavLink>
+						<NavLink eventKey='7' as={Link} to={Constants.PATHS.ROBOTICS} onClick={scrollToTop}>Robotics</NavLink>
+						<NavLink eventKey='7' as={Link} to={Constants.PATHS.ROCKSAT} onClick={scrollToTop}>Rocksat</NavLink>
 						{/* <NavLink eventKey='4' as={HashLink} to='/home#programs'>Programs</NavLink> */}
 						{/* <NavLink eventKey='5' as={HashLink} to='/home#sponsors'>Sponsors</NavLink> */}
 						{/* <NavLink eventKey='6' as={HashLink} to='/home#contact'>Contact Us</NavLink> */}

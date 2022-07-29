@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Navbar, Nav } from 'react-bootstrap'
-import { COLORS } from '../../tools/Constants'
+import { COLORS, FONT_FAMILY } from '../../tools/Constants'
 
 export default class NavigationStyles {
 
@@ -9,7 +9,7 @@ export default class NavigationStyles {
 		padding: 0%;
 		background-color: ${props => props.transparency ? 'transparent' : `${COLORS.PRIMARY}`} !important;
 		transition: background-color 0.5s;
-		height: 50px; /* TODO: change to relative based on screen width */
+		height: max(calc(var(--vh) * .04), 50px); /* TODO: change to relative based on screen width */
 
 
 		& > .navbar-collapse {
@@ -29,13 +29,13 @@ export default class NavigationStyles {
 		margin-right: 5%; /* TODO: change to relative based on screen width */
 		padding-left: 3%;
 		padding-right: 3%;
-		background: linear-gradient(90deg, ${COLORS.PRIMARY}, #0a3d91, ${COLORS.PRIMARY});
+		background: linear-gradient(90deg, ${COLORS.PRIMARY}, ${COLORS.PRIMARY}7f, ${COLORS.PRIMARY});
 		height: 100%;
 
 		& > .logo-container {
 			height: 100%;
 			display: flex;
-			column-gap: 3%;
+			column-gap: 7%;
 			align-items: center;
 			justify-content: center;
 			text-decoration: none;
@@ -45,12 +45,16 @@ export default class NavigationStyles {
 			height: 100%;
 		}
 
-		& > .logo-container > p {
+		& > .logo-container > div > p {
+			text-align: center;
+			${FONT_FAMILY.BODY}
 			color: ${COLORS.TEXT};
+			margin: 0;
+			font-size: max(calc(var(--vh) * .012), 10px);
 		}
 
 		:hover {
-			background: linear-gradient(90deg, ${COLORS.SELECTED}, #093273, ${COLORS.SELECTED});
+			background: linear-gradient(90deg, ${COLORS.SELECTED}, ${COLORS.PRIMARY}7f, ${COLORS.SELECTED});
 			cursor: pointer;
 		}
 	`

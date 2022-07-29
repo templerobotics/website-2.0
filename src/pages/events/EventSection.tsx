@@ -12,10 +12,10 @@ class EventSection extends React.Component<{events: EventObject[]}, never> {
 						<Styles.EventItemContainer key={i}>
 							<h2 className='title'>{event.title}</h2>
 							<div className='date'>
-								<p>{event.date.getMonth() + 1}/{event.date.getDate()}</p>
+								<p>{!isNaN(event.date.getMonth()) ? `${event.date.getMonth() + 1}/${event.date.getDate()}` : 'TBD'}</p>
 							</div>
-							<p className='location'>{event.location}</p>
-							<p className='description'>{event.description}</p>
+							<p className='location'>Location: {event.location}</p>
+							<p className='description'>Description: {event.description}</p>
 						</Styles.EventItemContainer>
 					)
 				})}

@@ -19,6 +19,7 @@ import NoMatch404 from './pages/general/NoMatch404'
 
 // Images
 import backgroundVideo from './assets/vids/nasavid.mp4'
+import { PATHS } from './tools/Constants'
 
 const App = (): React.ReactElement => {
 	return (
@@ -34,11 +35,11 @@ const App = (): React.ReactElement => {
 						{/* Define routes within the website */}
 						<Routes>
 							<Route path='/' element={<Home/>}/>
-							<Route path='/home' element={<Home/>}/>
-							<Route path='/events' element={<Events/>}/>
-							<Route path='/robotics' element={<RoboticMining/>}/>
-							<Route path='/sponsors' element={<Sponsors/>}/>
-							<Route path='/rocksat' element={<Rocksat/>}/>
+							<Route path={PATHS.HOME} element={<Home/>}/>
+							<Route path={PATHS.EVENTS} element={<Events/>}/>
+							<Route path={PATHS.ROBOTICS} element={<RoboticMining/>}/>
+							<Route path={PATHS.SPONSORS} element={<Sponsors/>}/>
+							<Route path={PATHS.ROCKSAT} element={<Rocksat/>}/>
 							{/* If no path was matched, go to 404 page */}
 							<Route path='*' element={<NoMatch404/>}/>
 						</Routes>
