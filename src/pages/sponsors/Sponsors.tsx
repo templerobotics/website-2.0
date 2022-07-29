@@ -10,7 +10,7 @@ import Styles, { SponsorImages } from './SponsorsStyles'
 
 const Sponsors = (): React.ReactElement => {
 	return (
-		<Styles.SponsorContainer className='grid-container'>
+		<Styles.SponsorContainer>
 			<Styles.TitleContainer className='title-container'>
 				<h2 className='title'>Sponsors</h2>
 				<AiOutlineDash/>

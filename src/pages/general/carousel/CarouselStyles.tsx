@@ -1,6 +1,6 @@
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs'
 import styled from 'styled-components'
-import { CSS_STYLES, FONT_FAMILY } from '../../../tools/Constants'
+import { ANIMATION_TIME, COLORS, CSS_STYLES, FONT_FAMILY } from '../../../tools/Constants'
 import { Color } from '../../../tools/CustomTypes'
 
 export interface SlideInfo {
@@ -28,14 +28,14 @@ export default class CarouselStyles {
 		grid-template-rows: calc(var(--vh) * .24) auto;
 		justify-items: center;
 		align-items: center;
-		-webkit-transition: background-color var(--animation-time); /* For Safari 3.1 to 6.0 */
-		transition: background-color var(--animation-time);
+		-webkit-transition: background-color ${ANIMATION_TIME}; /* For Safari 3.1 to 6.0 */
+		transition: background-color ${ANIMATION_TIME};
 	`
 
 	static readonly Chevron = styled(BsChevronLeft || BsChevronRight)<{right?: boolean | string}>`
-		color: var(--color-text);
+		color: ${COLORS.TEXT};
 		:hover {
-			color: var(--color-hover-text);
+			color: ${COLORS.HOVER_TEXT};
 			cursor: pointer;
 		}
 		grid-column: ${props => props.right ? 3 : 1};
@@ -74,6 +74,10 @@ export default class CarouselStyles {
 			${FONT_FAMILY.SECONDARY_TITLE}
 		}
 
+		& > p {
+			margin-bottom: 1rem;
+		}
+
 		${CSS_STYLES.showScrollbar('&')}
 
 		& > div > a {
@@ -90,9 +94,9 @@ export default class CarouselStyles {
 		grid-column: 2;
 
 		& > * {
-			-webkit-transition: color var(--animation-time) linear;
-			-ms-transition: color var(--animation-time) linear;
-			transition: color var(--animation-time) linear;
+			-webkit-transition: color ${ANIMATION_TIME} linear;
+			-ms-transition: color ${ANIMATION_TIME} linear;
+			transition: color ${ANIMATION_TIME} linear;
 		}
 	`
 }

@@ -12,6 +12,14 @@ import slide3 from '../../assets/pics/carousel/ballon-team.jpg'
 export default class HomeStyles {
 	static readonly slideInfo: SlideInfo[] = [
 		{
+			image: slide2,
+			title: 'ROCKSAT', description: `The Rockstat Team designed a payload that will be placed inside of a sounding 
+			rocket which is provided by the Wallops Flight Facility. The rocket will launch at Wallops Island where it will follow a 
+			sub-orbital flight path into the Atlantic Ocean, reaching an estimated maximum height of 72 miles.`,
+			color: COLORS.GREEN, otherContent: <Button source={'https://spacegrant.colorado.edu/rs-c-2020-current-teams/rsc-tu-20'}
+				size={'medium'} text={'Learn More'} />
+		},
+		{
 			image: slide1, title: 'NASA RMC',
 			description: `The NASA Robotics Mining Competition is a university-level student competion 
 			to design and build a mining robot that can traverse the challenging simulated Martian terrain.
@@ -20,14 +28,6 @@ export default class HomeStyles {
 			resource mining mission.`,
 			color: COLORS.BLUE,
 			otherContent: <Button source={'/rmc'} local={true} text={'Learn More'} size={'medium'}/>
-		},
-		{
-			image: slide2,
-			title: 'ROCKSAT', description: `The Rockstat Team designed a payload that will be placed inside of a sounding 
-			rocket which is provided by the Wallops Flight Facility. The rocket will launch at Wallops Island where it will follow a 
-			sub-orbital flight path into the Atlantic Ocean, reaching an estimated maximum height of 72 miles.`,
-			color: COLORS.GREEN, otherContent: <Button source={'https://spacegrant.colorado.edu/rs-c-2020-current-teams/rsc-tu-20'}
-				size={'medium'} text={'Learn More'} />
 		},
 		{
 			image: slide3, title: 'NASA BALOONING',
@@ -63,6 +63,20 @@ export default class HomeStyles {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
+		& > .nasa-title {
+			height: calc(var(--vh) * .1);
+			display: flex;
+			align-items: center;
+		}
+
+		& > .nasa-title > img {
+			height: 100%;
+		}
+
+		& > .nasa-title > p {
+			${FONT_FAMILY.TITLE}
+		}
 	`
 
 	static readonly LargeText = styled.p`
@@ -93,12 +107,12 @@ export default class HomeStyles {
 		justify-content: center;
 		padding-left: 15%;
 		padding-right: 15%;
-		background: linear-gradient(200deg, #9D2235, #996b72, #9D2235);
+		background: linear-gradient(200deg, ${COLORS.PRIMARY}, #996b72, ${COLORS.PRIMARY});
 		row-gap: 10%;
 
 		& > h2 {
 			text-align: center;
-			${FONT_FAMILY.TITLE}
+			${FONT_FAMILY.SECONDARY_TITLE}
 		}
 	`
 

@@ -1,6 +1,5 @@
 // Third party
 import React from 'react'
-import { AiOutlineDash } from 'react-icons/ai'
 
 // Custom components
 import Button from '../general/button/Button'
@@ -15,13 +14,19 @@ import robot from '../../assets/pics/robot-2019.jpg'
 import outreachPhoto1 from '../../assets/pics/outreach/vex.jpg'
 import outreachPhoto2 from '../../assets/pics/outreach/expo.jpg'
 import outreachPhoto3 from '../../assets/pics/outreach/interview.gif'
+import title from '../../assets/pics/logos/robotics-red.png'
 
 const RoboticMining = (): React.ReactElement => {
 	return (
 		<Styles.RmcContainer>
 			<Styles.TitleContainer className='title-container'>
-				<h2 className='title'>NASA Robotics Mining Competition</h2>
-				<AiOutlineDash/>
+				<img width='80%' src={title} alt='Temple Robotics'/>
+				<p className='large-text'>We make robots and stuff</p>
+				<p className='small-text'>Visit us in the</p>
+				<h4>
+					Student space exploration and embedded systems lab <br/>
+					(second floor of the engineering building)
+				</h4>
 			</Styles.TitleContainer>
 			<Styles.RmcDescription>
 				<div>

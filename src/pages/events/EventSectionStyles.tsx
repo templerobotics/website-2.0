@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { FONT_FAMILY } from '../../tools/Constants'
+import { COLORS, FONT_FAMILY } from '../../tools/Constants'
 
 export default class EventSectionStyles {
 	static readonly EventSectionContainer = styled.div<{rows: number}>`
@@ -18,7 +18,7 @@ export default class EventSectionStyles {
 		display: grid;
 		grid-template-columns: 30% 30% 40%;
 		grid-template-rows: 40% 60%;
-		background-color: var(--color-primary);
+		background-color: ${COLORS.PRIMARY};
         border-radius: calc(var(--vh) * .05);
 		justify-items: center;
 		align-items: center;
@@ -29,7 +29,7 @@ export default class EventSectionStyles {
 			width: 100%;
 			grid-row-start: 1;
 			grid-row-end: 3;
-			background-color: var(--color-selected);
+			background-color: ${COLORS.SELECTED};
 			display: flex;
 			align-items: center;
 			justify-content: center;
