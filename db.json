@@ -1,23 +1,26 @@
-[
-	{
-		"title": "Visit us at Temple Fest!",
-		"description": "Join us at Temple Fest where robotics will have a table and be showcasing our robot for everyone to see!",
-		"date": "08/19/2022",
-		"location": "Outside of the SAC",
-		"id": 0
-	},
-	{
-		"title": "Visit us at Temple Fest!",
-		"description": "Join us at Temple Fest where robotics will have a table and be showcasing our robot for everyone to see!",
-		"date": "08/25/2022",
-		"location": "Outside of the SAC",
-		"id": 1
-	},
-	{
-		"title": "First General Body Meeting",
-		"description": "Join in for our first general body meeting of the year! We will discuss how you can join the team and some of the events we will be participating in during the year.",
-		"date": "",
-		"location": "Engineering building",
-		"id": 2
-	}
-]
+{
+	"$schema": "./db-schema.json",
+	"events": [
+		{
+			"title": "Visit us at Temple Fest!",
+			"description": "Join us at Temple Fest where robotics will have a table and be showcasing our robot for everyone to see!",
+			"date": "08/19/2022",
+			"location": "Outside of the SAC",
+			"id": 0
+		},
+		{
+			"title": "Visit us at Temple Fest!",
+			"description": "Join us at Temple Fest where robotics will have a table and be showcasing our robot for everyone to see!",
+			"date": "08/25/2022",
+			"location": "Outside of the SAC",
+			"id": 1
+		},
+		{
+			"title": "First General Body Meeting",
+			"description": "Join in for our first general body meeting of the year! We will discuss how you can join the team and some of the events we will be participating in during the year.",
+			"date": "",
+			"location": "Engineering building",
+			"id": 2
+		}
+	]
+}

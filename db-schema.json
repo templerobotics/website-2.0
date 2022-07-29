@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "type": "object",
+    "properties": {
+        "events": {
+            "type": "array",
+            "items": {
+                "required": ["id", "date", "title", "description", "location"],
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "description": "Title of the event"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Description of the event"
+                    },
+                    "date": {
+                        "type": "string",
+                        "pattern": "[0-9]{2}\/[0-9]{2}\/[0-9]{4}|^(?![\\s\\S])",
+                        "description": "Date of the event"
+                    },
+                    "location": {
+                        "type": "string",
+                        "description": "Location of the event"
+                    },
+                    "id": { "type": "number" }
+                },
+                "additionalProperties": false
+            }
+        }
+    }
+}
