@@ -1,30 +1,23 @@
 [
 	{
-		"title": "Title of the event",
-		"description": "Description of the event",
-		"date": "04/22/2020",
-		"location": "Engineering building",
+		"title": "Visit us at Temple Fest!",
+		"description": "Join us at Temple Fest where robotics will have a table and be showcasing our robot for everyone to see!",
+		"date": "08/19/2022",
+		"location": "Outside of the SAC",
 		"id": 0
 	},
 	{
-		"title": "Title of the event 2",
-		"description": "Description of the event 2",
-		"date": "04/23/2022",
-		"location": "Engineering building",
+		"title": "Visit us at Temple Fest!",
+		"description": "Join us at Temple Fest where robotics will have a table and be showcasing our robot for everyone to see!",
+		"date": "08/25/2022",
+		"location": "Outside of the SAC",
 		"id": 1
 	},
 	{
-		"title": "Title of the event 2",
-		"description": "Description of the event 2",
-		"date": "04/23/2023",
+		"title": "First General Body Meeting",
+		"description": "Join in for our first general body meeting of the year! We will discuss how you can join the team and some of the events we will be participating in during the year.",
+		"date": "",
 		"location": "Engineering building",
 		"id": 2
-	},
-	{
-		"title": "Title of the event 2",
-		"description": "Description of the event 2",
-		"date": "04/23/2024",
-		"location": "Engineering building",
-		"id": 3
 	}
 ]
