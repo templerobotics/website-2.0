@@ -8,7 +8,7 @@ export default class Copyright extends React.Component {
 	render (): React.ReactElement {
 		return (
 			<Styles.CopyrightContainer>
-				© {new Date().getFullYear()} Temple Robotics. All Rights Reserved.
+				© {new Date().getFullYear()} NASA Space Exploration and Embedded Systems Lab. All Rights Reserved.
 			</Styles.CopyrightContainer>
 		)
 	}

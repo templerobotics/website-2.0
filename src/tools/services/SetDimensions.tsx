@@ -3,7 +3,7 @@ import React from 'react'
 import { isMobile } from 'react-device-detect'
 
 // General tools
-import useWindowDimensions, { setVariableCssVars } from './HelpfulFunctions'
+import useWindowDimensions, { setVariableCssVars } from '../HelpfulFunctions'
 
 
 const SetDimensions = (): React.ReactElement => {

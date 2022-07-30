@@ -34,7 +34,7 @@ export default class PhotoGalleryStyles {
 		width: 100%;
 
 		:hover {
-			color: var(--color-hover-text);
+			color: ${COLORS.HOVER_TEXT};
 			cursor: pointer;
 		}
 	`

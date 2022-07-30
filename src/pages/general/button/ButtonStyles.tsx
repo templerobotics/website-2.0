@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { FONT_FAMILY } from '../../../tools/Constants'
+import { COLORS, FONT_FAMILY } from '../../../tools/Constants'
 
 export interface ButtonProps {
 	id?: string,
@@ -31,7 +31,7 @@ export default class ButtonStyles {
 			margin: 0;
 		}
 		& > .link-submit-button:hover {
-			color: var(--color-primary);
+			color: ${COLORS.PRIMARY};
 		}
 	`
 
@@ -52,7 +52,7 @@ export default class ButtonStyles {
 			margin: 0;
 		}
 		& > .link-submit-button:hover {
-			color: var(--color-primary);
+			color: ${COLORS.PRIMARY};
 		}
 	`
 }

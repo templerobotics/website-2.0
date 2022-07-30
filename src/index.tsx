@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import SetDimensions from './tools/SetDimensions'
+import SetDimensions from './tools/services/SetDimensions'
 
 ReactDOM.render(
 	<React.StrictMode>

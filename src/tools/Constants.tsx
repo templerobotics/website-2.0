@@ -4,9 +4,18 @@ export const MOBILE_SIZE = 767
 
 export const ANIMATION_TIME = '500ms'
 
+export class PATHS {
+	static readonly HOME: string = '/home'
+	static readonly EVENTS: string = '/events'
+	static readonly SPONSORS: string = '/sponsors'
+	static readonly ROCKSAT: string = '/rocksat'
+	static readonly ROBOTICS: string = '/robotics'
+}
+
 export class COLORS {
 	static readonly PRIMARY: Color = '#9D2235'
 	static readonly SECONDARY: Color = '#343a3f'
+	static readonly SECONDARY_DARK: Color = '#272b2f'
 	static readonly THIRD: Color = '#52575b'
 	static readonly SELECTED: Color = '#801c29'
 	static readonly BACKGROUND: Color = '#9D2235'

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { CSS_STYLES, FONT_FAMILY, PHOTO_GALLERY } from '../../tools/Constants'
+import { FONT_FAMILY, PHOTO_GALLERY } from '../../tools/Constants'
 import { GalleryImage } from '../general/photo-gallery/PhotoGalleryStyles'
 import spaceBackground from '../../assets/pics/outreach/space-background.jpg'
 
@@ -29,49 +29,30 @@ export default class RoboticMiningStyles {
 	`
 
 	static readonly TitleContainer = styled.div`
-		& > .title {
-			${FONT_FAMILY.PAGE_TITLE}
-			font-size: calc(var(--vh) * .07);
-		}
-	`
-
-	static readonly RmcDescription = styled.div`
 		height: 100%;
-		background: linear-gradient(200deg, var(--color-primary), #996b72, var(--color-primary));
-		text-align: center;
-		row-gap: 5%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 
-		// New
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-
-		& > div {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			height: 100%;
+		& > .large-text {
+			${FONT_FAMILY.SUBTITLE}
+			letter-spacing: 5px;
+			line-height: 3;
+			text-transform: uppercase;
 		}
 
-		& > div > div {
-			margin-bottom: calc(var(--vh) * .08);
-		}
-
-		& > div > p {
-			margin: auto;
-			padding-left: calc(var(--vh) * .1);
-			padding-right: calc(var(--vh) * .1);
-			overflow-y: auto;
-			height: calc(var(--vh) * .1);
-		}
-
-		& > div > h2 {
-			${FONT_FAMILY.TITLE}
-			margin-top: calc(var(--vh) * .08);
+		& > .small-text {
+			${FONT_FAMILY.BODY}
+			letter-spacing: 9px;
+			text-transform: uppercase;
+			margin-top: 40px;
 			margin-bottom: 0;
 		}
 
-		${CSS_STYLES.showScrollbar('& > div > p')}
+		& > h4 {
+			${FONT_FAMILY.SUBTITLE}
+		}
 	`
 
 	static readonly OutreachGallery = styled.div`
